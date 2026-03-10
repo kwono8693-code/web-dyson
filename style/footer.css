@@ -1,12 +1,14 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+footer p{
+    line-height: initial;
+}
 footer h3{
     font-size:1.6rem;
     margin-bottom:1rem;
-    padding-top: 1rem;
-}
-footer{
-    background-color: #333;
-    color: #fff;
-    padding-bottom: 2rem;
 }
 .inner-footer{
     width: 1440px;
@@ -23,17 +25,14 @@ footer{
 .footer1 .item{
     display:flex;
     gap:1rem;
-    align-items:flex-start;
 }
 
-.footer1 .title{
-    font-weight:600;
-    font-size:1.3rem;
-    white-space:nowrap;
+.footer1 .title {
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .footer1 .content p{
-    font-size: .9rem;
     margin-bottom:.5rem;
     color:#fff;
     font-weight: 300;

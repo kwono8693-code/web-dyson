@@ -12,13 +12,86 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 <body>
    <div id="site-header"></div>
 
     <main>
-        <div class="banner">
+        <div class="hero-banner">
             <video src="./img/herobanner.mp4" autoplay muted loop></video>
+        </div>
+        <div class="common-frame">
+            <ul class="cate">
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="./img/cate-hair.jpg" alt="카테고리 헤어케어">
+                        </figure>
+                        <figcaption>헤어케어</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="./img/cate-cleaner.jpg" alt="카테고리 청소기">
+                        </figure>
+                        <figcaption>청소기</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="./img/cate-air.jpg" alt="카테고리 공청기">
+                        </figure>
+                        <figcaption>공청기</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="./img/cate-headphone.jpg" alt="카테고리 헤드폰">
+                        </figure>
+                        <figcaption>헤드폰</figcaption>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="./img/cate-light.jpg" alt="카테고리 조명">
+                        </figure>
+                        <figcaption>조명</figcaption>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <!-- Slider main container -->
+            <div class="swiper station">
+            <!-- Additional required wrapper -->
+            <ul class="swiper-wrapper train">
+                <!-- Slides -->
+                <li class="swiper-slide">
+                    <img src="./img/main-banner1.jpg" alt="배너 이미지1">
+                </li>
+                <li class="swiper-slide">
+                    <img src="./img/main-banner2.jpg" alt="배너 이미지2">
+                </li>
+                <li class="swiper-slide">
+                    <img src="./img/main-banner3.jpg" alt="배너 이미지3">
+                </li>
+                <li class="swiper-slide">
+                    <img src="./img/main-banner4.jpg" alt="배너 이미지4">
+                </li>
+                <li class="swiper-slide">
+                    <img src="./img/main-banner5.jpg" alt="배너 이미지5">
+                </li>
+            
+            </ul>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </main>
 
