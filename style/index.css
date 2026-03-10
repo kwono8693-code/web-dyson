@@ -56,3 +56,32 @@
     height: 100%;
     object-fit: cover;
 }
+.tab-menu span::after{
+    content:"|";
+}
+.tab-menu span:last-child::after{
+    display:none;
+}
+.common-frame>h3{
+    text-align: center;
+}
+.tabs span{
+    /* filter: drop-shadow(1px, 1px); */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: .2rem 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all .3s ease 0s;
+}
+.tab-menu ul{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    display: none;
+}
+.tab-menu ul.active{
+    display: block;
+}
