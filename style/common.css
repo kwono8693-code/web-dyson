@@ -23,3 +23,7 @@ p{
 .de{
     font-size: var(--fs-det);
 }
+.common-frame{
+    width: 1440px;
+    margin: 0 auto;
+}

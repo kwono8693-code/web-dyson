@@ -107,3 +107,9 @@ header.open .mega-menu {
 .menu-item > a:hover {
     font-weight: 600;
 }
+
+@media (max-width:1440px){
+    header{
+        display: none;
+    }
+}
