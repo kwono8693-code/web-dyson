@@ -1,5 +1,5 @@
 .hero-banner{
-    padding-top: 100px;
+    padding-top: 5rem;
     margin-bottom: 8rem;
 }
 .hero-banner video{
@@ -8,9 +8,10 @@
     object-fit: cover;
 }
 
-.cate{
+.cate {
     display: flex;
     margin-bottom: 10rem;
+    gap: 1rem;
 }
 .cate>li{
     flex: 1;
@@ -87,16 +88,12 @@
 }
 .tab-menu ul{
     justify-content: center;
-    gap: 6rem;
+    gap: 2rem;
     display: none;
 }
 .tab-menu ul.active{
     display: block;
     display: flex;
-}
-.tab-menu ul li{
-    width: 420px;
-    height: 600px;
 }
 .tab-menu ul li>a{
     display: flex;
@@ -105,8 +102,8 @@
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    /* width: 300px; */
-    /* height: 450px; */
+    border: 1px solid red;
+
 }
 .tab-menu ul li>a>p{
     font-weight: 600;
@@ -117,10 +114,4 @@
 }
 .tab-menu ul li>a>figcaption{
     height: 50px;
-}
-.tab-menu figure{
-    border: 1px solid red;
-    width: 300px;
-    height: 300px;
-    background-color: #ddd;
 }
