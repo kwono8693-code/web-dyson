@@ -6,6 +6,7 @@ function initHeaderMenu() {
 
   if (!header || menuItems.length === 0) return;
 
+
   menuItems.forEach(item => {
     item.addEventListener("mouseenter", () => {
 
@@ -54,7 +55,9 @@ function initHeaderMenu() {
             const parent = span.closest("li");
             const isActive = parent.classList.contains("on");
 
-            gnbSmartList.forEach(li => li.classList.remove("on"));
+            btnMore.forEach(item => {
+            item.parentElement.classList.remove("on");
+        });
 
             if (!isActive) {
                 parent.classList.add("on");

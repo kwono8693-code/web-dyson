@@ -67,19 +67,17 @@ header .inner-header{
     left: 0;
     width: 100%;
     background: #333;
-    padding: 1rem 17rem;
+    padding: 1rem 0;
+    padding-left: 340px;
 }
 header.open .mega-menu {
     display: block;
 }
 .depth2 {
     display: none;
-    /* width: 1600px;
-    margin: 0 auto; */
 }
 .mega-menu .depth2 {
-    /* max-width: 1600px; */
-    margin: 0 auto;
+    margin: 0;
 }
 .depth2.active {
     display: block;
@@ -187,6 +185,7 @@ header.open .mega-menu {
         transition: all .5s ease 0s;
         margin-bottom: 1rem;
         padding-bottom: .5rem;
+        cursor: pointer;
     }
     .gnb-smart>li.on{
         max-height: 300px;
