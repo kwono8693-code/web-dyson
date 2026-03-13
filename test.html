@@ -4,65 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
     <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+
     <link rel="stylesheet" href="./style/test.css">
 </head>
 <body>
-    <ul class="gnb">
-    <li>
-        <a href="#">헤어케어</a>
-        <ul class="depth2">
-            <li><a href="#">스타일러</a></li>
-            <li><a href="#">드라이어</a></li>
-            <li><a href="#">스트레이트너</a></li>
-            <li><a href="#">헤어 에센셜 케어</a></li>
-        </ul>
-    </li>
+    <div id="site-header"></div>
+    <div class="common-frame">
+        <nav class="category-tabs">
+            <button class="tab active" data-filter="styler">스타일러</button>
+            <button class="tab" data-filter="dryer">드라이어</button>
+            <button class="tab" data-filter="straitner">스트레이트너</button>
+            <button class="tab" data-filter="essentials">헤어 에센셜 케어</button>
+        </nav>
 
-    <li>
-        <a href="#">청소기</a>
-        <ul class="depth2">
-            <li><a href="#">로봇 청소기</a></li>
-            <li><a href="#">물청소기</a></li>
-            <li><a href="#">진공청소기</a></li>
-            <li><a href="#">진공 + 물청소기</a></li>
-            <li><a href="#">펫 사이언스</a></li>
-        </ul>
-    </li>
+        <div class="filter-bar">
+            <span id="product-count">0개 제품</span>
+            <div class="sort-container">
+                <button class="sort-button" id="sort-btn">
+                    <span id="current-sort">정렬기준</span>
+                    <span class="arrow-icon"></span>
+                </button>
+                <ul class="sort-list" id="sort-list">
+                    <li data-sort="new">최신순</li>
+                    <li data-sort="popular">인기순</li>
+                    <li data-sort="price-low">낮은가격순</li>
+                    <li data-sort="price-high">높은가격순</li>
+                </ul>
+            </div>
 
-    <li>
-        <a href="#">공기청정기</a>
-        <ul class="depth2">
-            <li><a href="#">공기청정기</a></li>
-            <li><a href="#">가습 공기청정기</a></li>
-            <li><a href="#">선풍기</a></li>
-        </ul>
-    </li>
+        </div>
 
-    <li>
-        <a href="#">헤드폰</a>
-        <ul class="depth2">
-            <li><a href="#">다이슨 온트랙 노이즈 캔슬링 헤드폰</a></li>
-            <li><a href="#">온트랙 이어쿠션, 갭, 어댑터</a></li>
-        </ul>
-    </li>
 
-    <li>
-        <a href="#">조명</a>
-        <ul class="depth2">
-            <li><a href="#">다이슨 솔라사이클 모프</a></li>
-        </ul>
-    </li>
+        <section class="product-grid" id="product-container"></section>
+    </div>
 
-    <li>
-        <a href="#">고객지원</a>
-        <ul class="depth2">
-            <li><a href="#">주문 조회</a></li>
-            <li><a href="#">서비스센터</a></li>
-            <li><a href="#">제품 지원</a></li>
-            <li><a href="#">메뉴얼 가이드</a></li>
-        </ul>
-    </li>
-</ul>
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/test.js"></script>
 </body>
 </html>

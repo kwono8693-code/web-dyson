@@ -134,6 +134,8 @@ header.open .mega-menu {
     .header-smart{
         display: block;
         height: 5rem;
+        width: auto;
+        margin: 0 2rem;
     }
     .header-smart .common-frame{
         display: flex;
@@ -227,5 +229,12 @@ header.open .mega-menu {
     }
     .btn-close{
         cursor: pointer;
+    }
+}
+
+@media (max-width:768px){
+    .header-smart{
+        width: auto;
+        margin: 0 1rem;
     }
 }

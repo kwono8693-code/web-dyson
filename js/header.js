@@ -23,18 +23,20 @@ function initHeaderMenu() {
 
     });
   });
-  const gnb = document.querySelector(".gnb");
-  const megaMenu = document.querySelector(".mega-menu");
+    const gnb = document.querySelector(".gnb");
+    const megaMenu = document.querySelector(".mega-menu");
+    const firstMenu = document.querySelector(".gnb > li:first-child");
 
-  if (gnb && megaMenu) {
-    function setMegaMenuPosition(){
-      const gnbLeft = gnb.getBoundingClientRect().left;
-      megaMenu.style.paddingLeft = gnbLeft + "px";
+    if (gnb && megaMenu && firstMenu) {
+
+      function setMegaMenuPosition(){
+        const menuLeft = firstMenu.getBoundingClientRect().left;
+        megaMenu.style.paddingLeft = menuLeft + "px";
+      }
+
+      setMegaMenuPosition();
+      window.addEventListener("resize", setMegaMenuPosition);
     }
-
-    setMegaMenuPosition();
-    window.addEventListener("resize", setMegaMenuPosition);
-  }
   
 
   header.addEventListener("mouseleave", () => {
