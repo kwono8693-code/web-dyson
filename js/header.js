@@ -23,6 +23,19 @@ function initHeaderMenu() {
 
     });
   });
+  const gnb = document.querySelector(".gnb");
+  const megaMenu = document.querySelector(".mega-menu");
+
+  if (gnb && megaMenu) {
+    function setMegaMenuPosition(){
+      const gnbLeft = gnb.getBoundingClientRect().left;
+      megaMenu.style.paddingLeft = gnbLeft + "px";
+    }
+
+    setMegaMenuPosition();
+    window.addEventListener("resize", setMegaMenuPosition);
+  }
+  
 
   header.addEventListener("mouseleave", () => {
     header.classList.remove("open");
@@ -49,19 +62,24 @@ function initHeaderMenu() {
     })
     // 모바일에서 2뎁스 메뉴 나오는 기능
 
-    const btnMore = document.querySelectorAll(".gnb-smart li .btn-more")
-    btnMore.forEach(span=>{
-        span.addEventListener("click",()=>{
-            const parent = span.closest("li");
-            const isActive = parent.classList.contains("on");
+    const btnMore = document.querySelectorAll(".gnb-smart .btn-more");
 
-            btnMore.forEach(item => {
-            item.parentElement.classList.remove("on");
-        });
+btnMore.forEach(btn=>{
+  btn.addEventListener("click",()=>{
 
-            if (!isActive) {
-                parent.classList.add("on");
-            }
-        })
-    })
+    const parent = btn.closest("li");
+    const gnbList = document.querySelectorAll(".gnb-smart > li");
+
+    const isOpen = parent.classList.contains("on");
+
+    gnbList.forEach(li=>{
+      li.classList.remove("on");
+    });
+
+    if(!isOpen){
+      parent.classList.add("on");
+    }
+
+  });
+});
 }

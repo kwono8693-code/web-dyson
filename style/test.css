@@ -1,0 +1,40 @@
+.gnb{
+    width:800px;
+    display:flex;
+    height:100%;
+    font-size:1rem;
+    position:relative;
+}
+
+
+.depth2{
+  position:absolute;
+  top:100px;
+  left:0;
+
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+}
+.gnb > li:hover .depth2{
+  opacity:1;
+  visibility:visible;
+}
+header::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:100px;
+    width:100%;
+    height:0;
+    background:#333;
+    transition:.4s;
+    z-index:-1;
+}
+
+header:hover::after{
+    height:220px;
+}
+.depth2 a{
+    white-space:nowrap;
+}
