@@ -135,7 +135,7 @@ header.open .mega-menu {
         display: block;
         height: 5rem;
         width: auto;
-        margin: 0 2rem;
+        /* margin: 0 2rem; */
     }
     .header-smart .common-frame{
         display: flex;
@@ -235,6 +235,6 @@ header.open .mega-menu {
 @media (max-width:768px){
     .header-smart{
         width: auto;
-        margin: 0 1rem;
+        /* margin: 0 1rem; */
     }
 }

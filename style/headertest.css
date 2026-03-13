@@ -1,0 +1,153 @@
+header{
+    position:fixed;
+    background:#333;
+    color:#fff;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.inner-header{
+    margin:0 2rem;
+    height:100px;
+}
+
+header .inner-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:7rem;
+}
+
+.gnb{
+    width:800px;
+    display:flex;
+    height:100%;
+    font-size:1rem;
+    position:relative;
+}
+
+.gnb>li{
+    flex:1;
+}
+
+.gnb>li>a{
+    display:flex;
+    height:100%;
+    align-items:center;
+    justify-content:center;
+}
+
+.lnb{
+    display:flex;
+    width:580px;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.sub-menu{
+    display:flex;
+    gap:1rem;
+}
+
+.sub-menu>li{
+    color:#ccc;
+    font-size:.8rem;
+}
+
+.sub-menu>li>a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.icon-menu{
+    display:flex;
+    gap:1rem;
+}
+
+.gnb a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* 2depth */
+
+.depth2{
+    position:absolute;
+    top:100px;
+    left:0;
+    width:100%;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(10px);
+    transition:opacity .3s ease, transform .3s ease;
+}
+
+.depth2 li{
+    margin-bottom:.7rem;
+}
+
+.depth2 a{
+    color:#fff;
+    text-decoration:none;
+    font-size:.8rem;
+    white-space:nowrap;
+}
+
+/* 1depth hover */
+
+.gnb > li:hover .depth2{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* 메가메뉴 배경 */
+
+header::after{
+    content:"";
+    position:absolute;
+    top:100px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100vw;
+
+    max-height:0;
+    overflow:hidden;
+
+    background:#333;
+    transition:max-height .4s ease;
+
+    z-index:-1;
+}
+
+/* JS가 추가하는 클래스 */
+
+header.menu-open::after{
+    max-height:500px;
+}
+
+/* font */
+
+.gnb > li a{
+    font-weight:400;
+}
+
+.gnb > li a:hover{
+    font-weight:600;
+}
+header::after{
+    z-index:0;
+}
+
+.inner-header{
+    position:relative;
+    z-index:1;
+}
+header::after{
+    background:red;
+}
