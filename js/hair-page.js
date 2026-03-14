@@ -273,9 +273,11 @@ function updateProductGrid(items) {
                 <div class="img-box"><img src="${item.img}" alt="${item.name}"></div>
                 <div class="info-box">
                     <h3 class="product-name">${item.name}</h3>
-                    <p class="product-desc">${item.desc1}</p>
-                    <p class="product-desc">${item.desc2}</p>
-                    <p class="product-desc">${item.desc3}</p>
+                    <div class="info-box2">
+                        <p class="product-desc">${item.desc1}</p>
+                        <p class="product-desc">${item.desc2}</p>
+                        <p class="product-desc">${item.desc3}</p>
+                    </div>
                     <span class="price ${isSale ? 'on' : ''}">${item.price}</span>
                 </div>
             </a>
