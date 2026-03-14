@@ -3,41 +3,35 @@ function initHeaderMenu() {
   const header = document.querySelector("header");
   const menuItems = document.querySelectorAll(".menu-item");
   const depth2Menus = document.querySelectorAll(".depth2");
+  const megaMenu = document.querySelector(".mega-menu");
+  
+  // 🌟 핵심: 첫 번째 메뉴인 '헤어케어'의 a 태그(텍스트 위치)를 고정 타겟으로 잡습니다.
+  const firstMenuLink = document.querySelector(".gnb > li:first-child > a");
 
-  if (!header || menuItems.length === 0) return;
+  if (!header || menuItems.length === 0 || !firstMenuLink) return;
 
+  // 메가메뉴를 항상 첫 번째 메뉴 텍스트 시작점에 맞추는 함수
+  function alignToFirstMenu() {
+    // 헤어케어 텍스트의 화면상 왼쪽 좌표값을 가져옵니다.
+    const leftPos = firstMenuLink.getBoundingClientRect().left;
+    // 그 값만큼 메가메뉴 안쪽으로 패딩을 줘서 2뎁스 메뉴를 밀어냅니다.
+    megaMenu.style.paddingLeft = leftPos + "px";
+  }
+
+  // 처음에 한번 맞춰주고, 창 크기가 변할 때마다 계속 다시 맞춰줍니다.
+  alignToFirstMenu();
+  window.addEventListener("resize", alignToFirstMenu);
 
   menuItems.forEach(item => {
     item.addEventListener("mouseenter", () => {
-
       const target = item.dataset.menu;
-
       header.classList.add("open");
 
       depth2Menus.forEach(menu => {
-        menu.classList.toggle(
-          "active",
-          menu.dataset.target === target
-        );
+        menu.classList.toggle("active", menu.dataset.target === target);
       });
-
     });
   });
-    const gnb = document.querySelector(".gnb");
-    const megaMenu = document.querySelector(".mega-menu");
-    const firstMenu = document.querySelector(".gnb > li:first-child");
-
-    if (gnb && megaMenu && firstMenu) {
-
-      function setMegaMenuPosition(){
-        const menuLeft = firstMenu.getBoundingClientRect().left;
-        megaMenu.style.paddingLeft = menuLeft + "px";
-      }
-
-      setMegaMenuPosition();
-      window.addEventListener("resize", setMegaMenuPosition);
-    }
-  
 
   header.addEventListener("mouseleave", () => {
     header.classList.remove("open");

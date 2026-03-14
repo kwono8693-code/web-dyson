@@ -26,12 +26,14 @@ header .inner-header{
 }
 .gnb>li{
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 .gnb>li>a{
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .lnb{
     display: flex;
@@ -61,28 +63,29 @@ header .inner-header{
     text-decoration: none;
 }
 .mega-menu {
-    /* display: none;
+    /* display: none; */
     position: absolute;
     top: 100px;
     left: 0;
     width: 100%;
     background: #333;
-    padding: 1rem 0;
-    padding-left: 340px; */
-    display: none;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    background: #333;
-    padding: 0;   /* padding-left 삭제 */
+    padding: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease 0s; /* 요청하신 속성 */
+    z-index: 10;
 }
 header.open .mega-menu {
-    display: block;
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
 }
 .depth2 {
     display: none;
     padding-top:1rem;
+    padding-left: 0;
+    margin: 0;
 }
 .mega-menu .depth2 {
     margin: 0;
