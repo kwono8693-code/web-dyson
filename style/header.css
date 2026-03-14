@@ -1,6 +1,6 @@
 header {
     position: fixed;
-    background: #333;
+    background: var(--main-color);
     color: #fff;
     top: 0;
     left: 0;
@@ -68,7 +68,7 @@ header .inner-header{
     top: 100px;
     left: 0;
     width: 100%;
-    background: #333;
+    background: var(--main-color);
     padding: 0;
     box-sizing: border-box;
     opacity: 0;
@@ -153,7 +153,7 @@ header.open .mega-menu {
         height: 100%;
         left: 0;
         top: 0;
-        background-color: #333;
+        background-color: var(--main-color);
         z-index: 3000;
         transform: translateX(100%);
         transition: all .5s ease 0s;

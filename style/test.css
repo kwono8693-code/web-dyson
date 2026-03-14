@@ -1,5 +1,3 @@
-
-
 .common-frame { 
     max-width: 1440px; 
     margin: 0 auto;
@@ -7,23 +5,33 @@
 .common-frame .category-tabs{
     margin-top: 5rem;
 }
+.banner{
+    height: 500px;
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+
+}
+.banner h2{
+    margin-bottom: 1rem;
+}
 /* 탭 메뉴 */
 .category-tabs {
     display: flex;
     justify-content: center;
-    gap: 60px; 
-    border-bottom: 1px solid var(--border-color); 
-    margin-bottom: 30px; 
+    gap: 3rem; 
+    margin-bottom: 1.5rem; 
 }
 
 .tab { 
     background: none; 
     border: none; 
-    padding: 15px 0; 
+    padding: 0.7rem 0; 
     cursor: pointer; 
-    font-size: 16px; 
+    font-size: 1rem; 
     color: #666; 
     position: relative; 
+    /* flex: 1; */
 }
 
 .tab.active { 
@@ -46,36 +54,35 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    margin-bottom: 20px; 
-    font-size: 14px; 
+    margin-bottom: 1.5rem; 
+    font-size: .8rem; 
 }
 
 /* ⭐ 4열 그리드 설정 ⭐ */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 이미지 요청사항: 4열 1fr */
-    column-gap: 20px;
-    row-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 1.5rem;
+    margin-bottom: 5rem;
 }
 
 /* 상품 카드 스타일 */
-.product-card { 
-    display: flex; 
-    flex-direction: column; 
-    position: relative; 
-}
-.badge { 
-    position: absolute; 
-    top: 0; right: 0; 
-    font-size: 12px; 
-    color: var(--accent-color); 
-    font-weight: bold; 
+.product-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #C8C8C8;
+    width: 320px;
+    height: 690px;
+    box-sizing: border-box;
+    padding: 2rem 1.3rem;
+    gap: 1.75rem;
 }
 
 .img-box { 
     width: 100%; 
     background: #fff; 
-    margin-bottom: 20px; 
+    margin-bottom: 1rem; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -90,35 +97,42 @@
     display: flex; 
     flex-direction: column; 
 }
-.product-name { 
-    font-size: 16px; 
-    font-weight: bold; 
-    margin-bottom: 10px; 
-    line-height: 1.4; 
-    height: 44px; 
-    overflow: hidden; 
+.product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #C8C8C8;
+    padding-bottom: 1.75rem;
 }
 .product-desc { 
-    font-size: 13px; 
+    font-size: .7rem; 
     color: #666; 
-    margin-bottom: 15px; 
-    line-height: 1.5; 
+    margin-bottom: .6rem; 
+    line-height: 100%;
 }
-.price { 
-    font-size: 16px; 
-    font-weight: bold; 
-    margin-bottom: 20px; }
-
+.price {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+}
+.info-box .price.on {
+    color: var(--pt-blue)
+}
 /* 버튼 스타일 */
 .btn-cart {
     width: 100%;
-    padding: 12px 0;
+    padding: .6rem 0;
     background: #fff;
-    border: 1px solid #333;
-    border-radius: 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 1.5rem;
     cursor: pointer;
-    font-size: 14px;
+    font-size: .9rem;
     transition: 0.2s;
+    text-align: center;
 }
 .btn-cart:hover { background: #000; color: #fff; }
 
@@ -126,8 +140,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    margin-bottom: 20px;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
 }
 
 .sort-container {
@@ -138,11 +152,11 @@
 .sort-button {
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: .8rem;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: .4rem;
     font-family: inherit;
 }
 
@@ -168,8 +182,8 @@
     width: 140px;
     background: #fff;
     list-style: none;
-    padding: 10px 0;
-    margin-top: 5px;
+    padding: .5rem 0;
+    margin-top: .4rem;
     border: 1px solid #eee;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     z-index: 10;
@@ -184,8 +198,8 @@
 }
 
 .sort-list li {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: .5rem 1rem;
+    font-size: .7rem;
     text-align: right;
     cursor: pointer;
 }
