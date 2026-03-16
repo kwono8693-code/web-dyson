@@ -8,56 +8,44 @@
     object-fit: cover;
 }
 
-.cate {
-    display: flex;
+.cate-frame {
     margin-bottom: 10rem;
-    gap: 1rem;
 }
-.cate>li{
-    flex: 1;
-}
-.cate>li>a{
+.cate-frame a{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 }
-.cate img{
+.cate-frame img{
     height: 100%;
     aspect-ratio: 250/125;
     object-fit: cover;
 }
-.cate figure{
+.cate-frame figure{
     filter: brightness(0.9);
     transition: all 1s ease 0s;
 }
-.cate figure:hover{
+.cate-frame figure:hover{
     filter: brightness(1);
     transform: scale(1.2)
 }
 .banner{
+    margin-bottom: 8rem;
+    background-color: #F6F6F6;
+    padding: 3rem 0;
+}
+.banner-frame{
+    background-color: #F6F6F6;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 600px;
-    background-color: #F6F6F6;
-    margin-bottom: 8rem;
-}
-.station {
-    width: 100%;
-    height: 100%;
 }
 .station img{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-}
-.swiper-slide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .swiper-pagination>span{
     background-color: var(--pt-blue);
@@ -73,6 +61,12 @@
     text-align: center;
     margin-bottom: 2rem;
 }
+/* 레이아웃 전체 간격 */
+.type2 {
+    margin-bottom: 8rem;
+}
+
+/* 탭 버튼 영역 (기존 스타일 유지) */
 .tabs {
     display: flex;
     align-items: center;
@@ -80,26 +74,42 @@
     gap: 5rem;
     margin-bottom: 2rem;
 }
-.tabs span{
+
+.tabs span {
     cursor: pointer;
     text-align: center;
+    color: #999;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
 }
-.tabs span.active{
+
+.tabs span.active {
     font-weight: 600;
+    color: #000;
+    border-bottom: 2px solid #000;
 }
-.tab-menu ul{
-    justify-content: center;
-    gap: 2rem;
-    display: none;
+
+/* Swiper 컨테이너 제어 - 정렬 문제 해결의 핵심 */
+.tab-slider {
+    display: none !important;
+    width: 100%;
+    max-width: 1200px; /* 사이트의 최대 너비에 맞게 조절 */
+    margin: 0 auto;    /* 중앙 정렬 */
+    overflow: hidden;  /* 영역 밖 공백 방지 */
 }
-.tab-menu ul li{
-    flex: 1;
+
+.tab-slider.active {
+    display: block !important;
 }
-.tab-menu ul.active{
-    display: block;
-    display: flex;
+.swiper-wrapper {
+  align-items: stretch;
 }
-.tab-menu ul li>a{
+/* ★ 주의: .swiper-wrapper에 display: flex를 절대 주지 마세요. 
+   Swiper 라이브러리가 인라인 스타일로 직접 계산합니다. */
+
+/* 슬라이드 내부 카드(a) 스타일 */
+.tab-slider .swiper-slide a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,26 +117,56 @@
     gap: 1rem;
     text-align: center;
     border: 1px solid #C8C8C8;
-
+    padding: 30px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    transition: border 0.3s ease;
+    
+    /* 슬라이드 칸에 꽉 차게 설정 */
+    width: 100%; 
+    height: 100%;
 }
-.tab-menu ul li>a>p{
+
+.tab-slider .swiper-slide a:hover {
+    border: 1px solid #000;
+}
+
+/* 이미지 스타일 (상하 정렬 최적화) */
+.tab-slider .swiper-slide figure {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-slider .swiper-slide figure img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 제품명 및 자세히 보기 (기존 유지) */
+.tab-slider .swiper-slide figcaption {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    font-size: 15px;
+    word-break: keep-all;
+}
+
+.tab-slider .swiper-slide p {
     font-weight: 600;
     margin-top: 1rem;
-}
-.type2{
-    margin-bottom: 8rem;
-}
-.tab-menu ul li>a>figcaption{
-    height: 50px;
+    font-size: 14px;
 }
 
+
 @media (max-width:1440px){
-    .banner{
-        /* height: 500px; */
-    }
 }
 @media (max-width:768px){
-    .banner{
-        /* height: 400px; */
-    }
+
 }
