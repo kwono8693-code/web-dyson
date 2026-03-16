@@ -121,7 +121,7 @@
     font-size: 1.15rem;
     font-weight: 600;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .info-box .price.on {
     color: var(--pt-blue)
