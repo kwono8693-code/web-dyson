@@ -208,7 +208,10 @@
                                     NEW 다이슨 에어랩 코안다2x™ <br>
                                     멀티 스타일러 앤 드라이어
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -219,7 +222,10 @@
                                 <figcaption>
                                     다이슨 슈퍼소닉 뉴럴 헤어드라이어
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -230,7 +236,10 @@
                                 <figcaption>
                                     다이슨 에어스트레이트 스트레이트너
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -243,7 +252,10 @@
                                 <figcaption>
                                     다이슨 스팟앤스크럽 Ai 로봇 청소기
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -254,7 +266,10 @@
                                 <figcaption>
                                     다이슨 클린앤워시 하이진 물청소기 
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -265,7 +280,10 @@
                                 <figcaption>
                                     다이슨 V15 오리진 플러피
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -278,7 +296,10 @@
                                 <figcaption>
                                     다이슨 허쉬젯 컴팩트 공기청정기
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -289,7 +310,10 @@
                                 <figcaption>
                                     다이슨 핫앤쿨 공기청정기 HP2
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -300,7 +324,10 @@
                                 <figcaption>
                                     다이슨 가습 공기청정기 HP2
                                 </figcaption>
-                                <p>자세히 보기→</p>
+                                <div class="detail">
+                                    <span>자세히 보기</span>
+                                    <span><img src="./img/arrow.svg" alt="화살표"></span>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -334,12 +361,28 @@
                         </ul>
                     </div>
                 </div>
-                <div class="content2">
-                    <img src="./img/ai-search.jpg" alt="ai 검색창" class="search-trigger">
-                    <div class="search-window">
-                        <input type="text" placeholder="필요한 제품을 입력해 보세요.">
-                        <button type="button">검색</button>
-                        <button type="button" class="close-btn">닫기</button>
+                <div class="chat-window">
+                    <div class="chat-header">
+                        <div class="bot-profile">
+                            <img src="./img/logo.svg" alt="로고">
+                        </div>
+                        <div class="chat-title">AI Assistant</div>
+                    </div>
+
+                    <div class="chat-content" id="chatContent">
+                        <div class="message bot">
+                            <div class="bubble1">어떤 용도의 제품을 찾고 계신가요?</div>
+                            <div class="bubble2">헤어 스타일링 제품을 찾고 있어요.</div>
+                            <div class="bubble3">드라이 기능과 스타일링을 함께 사용할 제품을 원하시나요?</div>
+                            <div class="bubble4">네, 머리를 빨리 말리면서 스타일링도 할 수 있으면 좋겠어요.</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-bar">
+                        <input type="text" id="userInput" placeholder="메시지를 입력하세요..." autocomplete="off">
+                        <button id="sendBtn">
+                            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -350,6 +393,5 @@
 
     <script src="./js/include.js"></script>
     <script src="./js/header.js"></script>
-
 </body>
 </html>

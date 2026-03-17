@@ -40,7 +40,7 @@ header .inner-header{
     width: 720px;
     align-items: center;
     justify-content: flex-end;
-    gap: .5rem;
+    gap: 1rem;
 }
 .sub-menu{
     display: flex;
@@ -57,7 +57,7 @@ header .inner-header{
 }
 .icon-menu{
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
 }
 .menu-item > a {
     color: #fff;
@@ -76,6 +76,7 @@ header .inner-header{
     visibility: hidden;
     transition: all .5s ease 0s; /* 요청하신 속성 */
     z-index: 10;
+    padding-bottom: 1rem;
 }
 header.open .mega-menu {
     /* display: block; */
