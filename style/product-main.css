@@ -10,10 +10,19 @@
     display: flex;
     margin-top: 5rem;
     align-items: center;
-
+    gap: 1rem;
+    padding: 1rem 0;
 }
-.banner h2{
+.banner h1{
     margin-bottom: 1rem;
+}
+.para-banner{
+    flex: 5;
+}
+.banner video{
+    height: 100%;
+    object-fit: cover;
+    flex: 7;
 }
 /* 탭 메뉴 */
 .category-tabs {

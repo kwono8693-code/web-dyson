@@ -61,8 +61,8 @@
     text-align: center;
     margin-bottom: 2rem;
 }
-/* 레이아웃 전체 간격 */
-.type2 {
+
+.best {
     margin-bottom: 8rem;
 }
 
@@ -106,13 +106,18 @@
     font-weight: 600;
     margin-top: 1rem;
 }
-.type2{
-    margin-bottom: 8rem;
-}
 .tab-menu ul li>a>figcaption{
     height: 50px;
 }
-
+.frame-ai{
+    /* display: flex; */
+}
+.content1 h1{
+    margin-bottom: .5rem;
+}
+.content1 h1+p{
+    margin-bottom: 7.5rem;
+}
 
 @media (max-width:1440px){
 }

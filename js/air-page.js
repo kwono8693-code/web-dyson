@@ -62,7 +62,7 @@ const products = [
         { 
         id: 7, 
         category: "airpurifier", 
-        name: "다이슨 핫앤쿨 공기청정기 HP2 (니켈/골드)", 
+        name: "다이슨 가습 공기청정기 PH2 (화이트/골드)", 
         desc1: "· 카드사 최대 12개월 무이자 할부 혜택", 
         desc2: "", 
         desc3: "", 
@@ -72,7 +72,7 @@ const products = [
     { 
         id: 8, 
         category: "airpurifier", 
-        name: "다이슨 핫앤쿨 공기청정기 HP2 (니켈/골드)", 
+        name: "다이슨 가습 공기청정기 PH2 (화이트/골드)", 
         desc1: "· 카드사 최대 12개월 무이자 할부 혜택", 
         desc2: "", 
         desc3: "", 
@@ -118,6 +118,16 @@ const products = [
         desc3: "", 
         price: "₩990,000", 
         img: "./img/product-humidifier4.jpg", 
+    },
+    { 
+        id: 13, 
+        category: "fan", 
+        name: "다이슨 쿨 선풍기 타워형 (화이트/실버)", 
+        desc1: "", 
+        desc2: "", 
+        desc3: "", 
+        price: "₩598,000", 
+        img: "./img/product-fan1.jpg", 
     },
 ];
 
