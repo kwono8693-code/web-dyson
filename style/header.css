@@ -23,6 +23,7 @@ header .inner-header{
     display: flex;
     height: 100%;
     font-size: 1rem;
+    flex: 2;
 }
 .gnb>li{
     flex: 1;
@@ -33,13 +34,13 @@ header .inner-header{
     display: flex;
     height: 100%;
     align-items: center;
-    /* justify-content: center; */
 }
-.lnb{
+.lnb {
     display: flex;
-    width: 580px;
-    justify-content: space-between;
+    width: 720px;
     align-items: center;
+    justify-content: flex-end;
+    gap: .5rem;
 }
 .sub-menu{
     display: flex;
@@ -130,7 +131,7 @@ header.open .mega-menu {
     display: none;
 }
 
-@media (max-width:1440px){
+@media (max-width:1600px){
     .header-pc{
         display: none;
     }

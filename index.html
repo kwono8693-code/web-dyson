@@ -151,7 +151,7 @@
             <div class="common-frame">
                 <div class="banner-frame">
                     <!-- Slider main container -->
-                    <div class="swiper station">
+                    <div class="swiper station-banner">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper train">
                             <!-- Slides -->
@@ -308,54 +308,39 @@
             </div>
         </div>
 
-        <div class="common-frame ai">
+        <div class="common-frame">
             <div class="frame-ai">
                 <div class="content1">
                     <h1>나에게 딱 맞는 다이슨 찾기</h1>
                     <p>AI가 맞춤 제품을 추천해드립니다.</p>
-                    <div class="swiper popup-slider">
-                    <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
+                    <div class="station-popup">
+                        <ul class="train-popup">
+                            <li>
                                 <img src="./img/popup1-pc.jpg" alt="ai 팝업 이미지 1" class="pc">
                                 <img src="./img/popup1-pad.jpg" alt="ai 팝업 이미지 1" class="pad">
                                 <img src="./img/popup1-mo.jpg" alt="ai 팝업 이미지 1" class="mo">
-                            </div>
-                            <div class="swiper-slide">
+                            </li>
+                            <li>
                                 <img src="./img/popup2-pc.jpg" alt="ai 팝업 이미지 2" class="pc">
                                 <img src="./img/popup2-pad.jpg" alt="ai 팝업 이미지 2" class="pad">
                                 <img src="./img/popup2-mo.jpg" alt="ai 팝업 이미지 2" class="mo">
-                            </div>
-                            <div class="swiper-slide">
+                            </li>
+                            <li>
                                 <img src="./img/popup3-pc.jpg" alt="ai 팝업 이미지 3" class="pc">
                                 <img src="./img/popup3-pad.jpg" alt="ai 팝업 이미지 3" class="pad">
                                 <img src="./img/popup3-mo.jpg" alt="ai 팝업 이미지 3" class="mo">
-                            </div>
-                        </div>
+                            </li>
+
+                        </ul>
                     </div>
-
-            <script>
-                const popupSlider = new Swiper('.popup-slider', {
-                    // Optional parameters
-                    direction: 'horizontal',
-                    loop: true,
-                    speed: 1000,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
-
-
-                    // And if we need scrollbar
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                    });
-            </script>
                 </div>
                 <div class="content2">
-                    <img src="./img/ai-search.jpg" alt="">
+                    <img src="./img/ai-search.jpg" alt="ai 검색창" class="search-trigger">
+                    <div class="search-window">
+                        <input type="text" placeholder="필요한 제품을 입력해 보세요.">
+                        <button type="button">검색</button>
+                        <button type="button" class="close-btn">닫기</button>
+                    </div>
                 </div>
             </div>
         </div>

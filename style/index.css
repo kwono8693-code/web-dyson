@@ -92,7 +92,7 @@
     display: block;
     display: flex;
 }
-.tab-menu ul li>a{
+.tab-menu ul li>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,7 +100,8 @@
     gap: 1rem;
     text-align: center;
     border: 1px solid #C8C8C8;
-
+    aspect-ratio: 425 /600;
+    height: 600px;
 }
 .tab-menu ul li>a>p{
     font-weight: 600;
@@ -109,14 +110,69 @@
 .tab-menu ul li>a>figcaption{
     height: 50px;
 }
+.content1 h1+p{
+    margin-bottom: 2rem;
+}
 .frame-ai{
-    /* display: flex; */
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid red;
+    margin-bottom: 5rem;
+}
+.frame-ai>div{
+    flex: 1;
 }
 .content1 h1{
-    margin-bottom: .5rem;
+    padding: 1rem;
+    padding-bottom: 0;
 }
-.content1 h1+p{
-    margin-bottom: 7.5rem;
+.content1 p{
+    padding: 1rem;
+}
+.station-popup{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    padding: 1rme;
+    box-sizing: border-box;
+}
+.train-popup{
+    width: 300%;
+    height: 100%;
+    transition: all .5s ease 0s;
+    display: flex;
+
+}
+
+.train-popup li{
+    flex: 1;
+}
+.train-popup img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.search-window {
+    position: fixed; /* 혹은 absolute (상황에 따라) */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    
+    /* 초기 상태: 숨김 */
+    display: none; 
+}
+
+/* active 클래스가 붙으면 보임 */
+.search-window.active {
+    display: block;
+}
+
+.search-trigger {
+    cursor: pointer; /* 마우스 올리면 클릭 가능하게 표시 */
 }
 
 @media (max-width:1440px){
