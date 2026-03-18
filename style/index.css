@@ -82,19 +82,21 @@
 .tabs span.active{
     font-weight: 600;
 }
-.tab-menu ul{
-    justify-content: center;
-    gap: 2rem;
+
+.best-swiper > ul{
     display: none;
 }
-.tab-menu ul li{
-    flex: 1;
-}
-.tab-menu ul.active{
+.best-swiper>ul.active {
     display: block;
     display: flex;
 }
-.tab-menu ul li>a {
+/* .best-swiper ul li{
+    border: 1px solid red;
+    aspect-ratio: 426/600;
+    height: 100%;
+    box-sizing: border-box;
+} */
+.best-swiper ul li>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,18 +105,22 @@
     text-align: center;
     border: 1px solid #C8C8C8;
     aspect-ratio: 425 /600;
-    height: 600px;
+    height: 100%;
+    box-sizing: border-box;
 }
-.tab-menu ul li>a>div{
+.best-swiper ul li>a>div{
     font-weight: 600;
     margin-top: 1rem;
 }
-.tab-menu ul li>a>figcaption{
+.best-swiper ul li>a>figcaption{
     height: 50px;
 }
 .detail{
     display: flex;
     gap: .5rem;
+}
+.detail img{
+    height: 1.2rem;
 }
 .content1 h1+p{
     margin-bottom: 2rem;
@@ -124,6 +130,7 @@
     padding: 1rem;
     box-sizing: border-box;
     margin-bottom: 5rem;
+    gap: 1rem;
 }
 .frame-ai>div{
     flex: 1;
@@ -139,8 +146,6 @@
     width: 500px;
     height: 500px;
     overflow: hidden;
-    padding: 1rme;
-    box-sizing: border-box;
 }
 .train-popup{
     width: 300%;
@@ -163,7 +168,7 @@
     width: 400px;
     height: 650px;
     background: white;
-    margin: 50px auto;
+    margin: 2.5rem auto;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -276,7 +281,54 @@
 }
 
 @media (max-width:1440px){
+    .best-swiper ul li>a {
+        aspect-ratio: 300 /600;
+    }
+    .station-popup{
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .chat-window {
+        width: 300px;
+        height: 650px;
+    }
 }
 @media (max-width:768px){
-
+    .best-swiper ul li>a {
+        aspect-ratio: 374 /600;
+    }
+    .station-popup{
+        width: 300px;
+        height: 300px;
+    }
+    .frame-ai{
+        flex-direction: column;
+    }
+    .frame-ai .content1{
+        align-self: center;
+    }
+    .frame-ai .chat-window{
+        align-self: center;
+    }
+    .chat-window {
+        width: 300px;
+        height: 500px;
+    }
+    .frame-ai > div{
+        flex: initial;
+    }
+}
+@media (max-width:400px){
+    .best-swiper ul li>a {
+        aspect-ratio: initial;
+    }
+    .station-popup{
+        width: auto;
+        height: auto;
+    }
+    .chat-window {
+        width: auto;
+        height: auto;
+    }
 }
