@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-page</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+    <script src="./js/login.js"></script>
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <div class="common-frame login">
+            <div class="logo-login">
+                <a href="./index.html">
+                    <img src="./img/logo-black.svg" alt="다이슨 로고">
+                </a>
+            </div>
+            <form class="login-form">
+                <div class="input-group">
+                    <input type="email" placeholder="이메일 주소" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="비밀번호" required>
+                </div>
+                
+                <div class="remember-me">
+                    <input type="checkbox" id="save-account">
+                    <label for="save-account">계정 저장</label>
+                </div>
+                
+                <button type="submit" class="btn-login">로그인</button>
+                
+                <button type="button" class="btn-kakao">
+                    <img src="./img/kakao-icon.svg" alt="" class="kakao-icon">
+                    카카오톡 간편 로그인
+                </button>
+            </form>
+            
+            <ul class="login-footer-links">
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#">비회원 주문조회</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            </div>
+    </main>
+
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>
