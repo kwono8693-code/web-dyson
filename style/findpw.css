@@ -1,0 +1,123 @@
+
+.box-pw{
+    margin: 10rem 0;
+}
+.find-pw-container {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 1.2rem; /* 24px */
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.find-pw-box {
+    padding: 5rem 5rem;
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+.find-pw-form {
+    width: 100%;
+    text-align: left;
+    font-size: .8rem;
+}
+
+.form-instruction {
+    font-size: .8rem;
+    margin-bottom: 0.8rem;
+}
+
+.method-selection {
+    margin-bottom: 0.5rem;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+}
+
+.radio-item input {
+    margin-right: 0.4rem;
+    accent-color: #000;
+}
+
+.radio-text {
+    font-weight: 500;
+}
+
+.method-description {
+    font-size: .7rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 0.65rem;
+    outline: none;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 2.2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.footer-links li {
+    font-size: .7rem; 
+    color: #bbb;
+    padding: 0 0.6rem;
+    position: relative;
+}
+
+.footer-links li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 1px;
+    height: 60%;
+    background-color: #eee;
+}
+
+
+
+/* --- 반응형 구간 --- */
+
+/* 1024px 미만 (태블릿 가로) */
+    @media (max-width: 1024px) {
+
+}
+
+/* 768px 미만 (태블릿 세로/모바일) */
+    @media (max-width: 768px) {
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findpw-page</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+    <link rel="stylesheet" href="./style/findpw.css">
+
+</head>
+<body>
+    <div id="site-header"></div>
+
+
+    <main>
+        <div class="common-frame">
+            <div class="box-pw">
+                <h1 class="page-title">비밀번호 찾기</h1>
+                <div class="find-pw-container">
+                    
+                    <div class="find-pw-box">
+                        <form class="find-pw-form">
+                            <p class="form-instruction">비밀번호 재설정 안내 받을 방법을 선택하세요.</p>
+                            
+                            <div class="method-selection">
+                                <label class="radio-item">
+                                    <input type="radio" name="reset-method" value="sms" checked>
+                                    <span class="radio-text">문자 메시지(SNS)</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="reset-method" value="email">
+                                    <span class="radio-text">이메일 주소</span>
+                                </label>
+                            </div>
+                            
+                            <p class="method-description">비밀번호 재설정 안내 이메일을 보내드리겠습니다.</p>
+                            
+                            <div class="input-group">
+                                <input type="text" placeholder="휴대폰번호" id="target-input">
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">문자 받기</button>
+                        </form>
+                        
+                        <ul class="footer-links">
+                            <li><a href="./findpw-page.html">비밀번호 찾기</a></li>
+                            <li><a href="./noMemberorder-page.html">비회원 주문조회</a></li>
+                            <li><a href="#">회원가입</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('input[name="reset-method"]').forEach((radio) => {
+            radio.addEventListener('change', (e) => {
+                const description = document.querySelector('.method-description');
+                const input = document.getElementById('target-input');
+                const button = document.querySelector('.btn-submit');
+
+                if (e.target.value === 'sms') {
+                    description.textContent = '비밀번호 재설정 안내 문자를 보내드리겠습니다.';
+                    input.placeholder = '휴대폰번호';
+                    button.textContent = '문자 받기';
+                } else {
+                    description.textContent = '비밀번호 재설정 안내 이메일을 보내드리겠습니다.';
+                    input.placeholder = '이메일 주소';
+                    button.textContent = '이메일 받기';
+                }
+            });
+        });
+        </script>
+    </main>
+
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>

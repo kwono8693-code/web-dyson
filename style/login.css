@@ -100,7 +100,7 @@ main{
 }
 
 .login-footer-links li {
-    font-size: 0.55rem; /* 11px */
+    font-size: 0.7rem;
     color: #999;
     position: relative;
     padding: 0 0.5rem; /* 10px */

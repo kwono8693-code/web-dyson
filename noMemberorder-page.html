@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order-page</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+    <link rel="stylesheet" href="./style/noMemberorder.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <div class="common-frame">
+            <div class="box-order">
+                <h1 class="page-title">비회원 주문조회</h1>
+                <div class="order-lookup-container">
+                    <div class="order-lookup-box">
+                        <form class="order-lookup-form">
+                            <div class="input-group">
+                                <input type="text" placeholder="주문번호" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" placeholder="이메일 주소" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="tel" placeholder="결제자 연락처" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">주문내역조회</button>
+                        </form>
+                        
+                        <ul class="footer-links">
+                            <li><a href="./findpw-page.html">비밀번호 찾기</a></li>
+                            <li><a href="./noMemberorder-page.html">비회원 주문조회</a></li>
+                            <li><a href="#">회원가입</a></li>
+                        </ul>
+
+                        <div class="order-info-text">
+                            <p>주문 상세 내역을 확인할 수 있도록 정확한 주문 번호, 이메일 주소 및 배송지 연락처를 입력해 주세요.</p>
+                            <p>* 배송이 시작되면 택배사에서 안내 메시지가 발송됩니다. 자세한 배송 상태는 택배사에서 보내드리는 메시지를 통해 확인해 주시기 바랍니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>
