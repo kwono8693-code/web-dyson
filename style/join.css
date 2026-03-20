@@ -1,0 +1,132 @@
+.box-join {
+    margin: 5rem 0;
+}
+.box-join h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.join-container {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-box {
+}
+.join-form{
+    max-width: 600px;
+}
+.required-notice {
+    text-align: right;
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.input-row {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.last-input{
+    align-items: flex-start;
+}
+.input-row label {
+    display: block;
+    font-size: .8rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    flex: 1;
+}
+.input-row > div{
+    flex: 2;
+}
+/* 입력창 공통 */
+.underlined-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 0.5rem 0;
+    font-size: 0.7rem;
+    outline: none;
+}
+
+.gray-input {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.65rem;
+    flex: 1;
+}
+/* 버튼이 포함된 입력 그룹 */
+.input-group-with-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.input-group-with-btn input {
+    padding: 0.4rem;
+    font-size: 0.7rem;
+    text-align: center;
+    width: 70%;
+}
+
+.phone-prefix {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    font-size: 0.7rem;
+}
+
+.btn-outline {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.6rem;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 30%;
+}
+
+/* 약관 동의 */
+.agreement-area {
+    margin: 2rem 0;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+}
+
+.check-item input {
+    margin-top: 0.15rem;
+    accent-color: #000;
+}
+
+.check-item span {
+    font-size: .7rem;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.red { color: #ff0000; }
+.gray { color: #999; }
+
+.btn-submit-join {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
