@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kakaologin-page</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+    <link rel="stylesheet" href="./style/kakaologin.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <div class="common-frame">
+            <div class="box-kakao-login">
+                <div class="kakao-container">
+                    <div class="kakao-box">
+                        <h1 class="kakao-logo">kakao</h1>
+                        
+                        <form id="kakaoLoginForm" class="kakao-form">
+                            <div class="kakao-input-row">
+                                <input type="text" id="kakaoId" placeholder="카카오메일 아이디, 이메일, 전화번호">
+                            </div>
+                            <div class="kakao-input-row">
+                                <input type="password" id="kakaoPw" placeholder="비밀번호">
+                            </div>
+
+                            <div class="save-area">
+                                <label class="kakao-check-item">
+                                    <input type="checkbox" id="saveAccount">
+                                    <span class="custom-circle"></span>
+                                    <span class="check-text">간편로그인 정보 저장</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-kakao-submit">로그인</button>
+                        </form>
+
+                        <div class="kakao-divider">
+                            <span>또는</span>
+                        </div>
+
+                        <div class="qr-area">
+                            <button type="button" id="btnQrLogin" class="btn-kakao-qr">QR코드 로그인</button>
+                            
+                            <div id="qrModal" class="qr-modal" style="display: none;">
+                                <div class="qr-overlay"></div> <div class="qr-content">
+                                    <button type="button" class="btn-qr-close">×</button>
+                                    <h2 class="qr-title">QR코드 로그인</h2>
+                                    <div id="qrcode"></div> <p class="qr-notice">카카오톡 앱에서 QR코드를 스캔하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="kakao-links">
+                            <li><a href="#">회원가입</a></li>
+                            <li class="link-right">
+                                <a href="#">계정찾기</a>
+                                <span class="split-bar"></span>
+                                <a href="#">비밀번호 찾기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="kakao-footer-info">
+                        <div class="footer-inner">
+                            <div class="footer-links">
+                                <div class="lang-selector">
+                                    <select id="langSelect" class="lang-select-box">
+                                        <option value="ko" selected>한국어</option>
+                                        <option value="en">English</option>
+                                        <option value="ja">日本語</option>
+                                        <option value="zh">简体中文</option>
+                                    </select>
+                                </div>
+                                <span class="footer-bar"></span>
+                                <a href="#">이용약관</a>
+                                <span class="footer-bar"></span>
+                                <a href="#"><strong>개인정보 처리방침</strong></a>
+                                <span class="footer-bar"></span>
+                                <a href="#">고객센터</a>
+                            </div>
+                            <p class="copyright">© Kakao Corp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+        
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 요소 선택 ---
+            const loginForm = document.getElementById('kakaoLoginForm');
+            const btnQrLogin = document.getElementById('btnQrLogin');
+            const qrModal = document.getElementById('qrModal');
+            const btnQrClose = document.querySelector('.btn-qr-close');
+            const qrOverlay = document.querySelector('.qr-overlay');
+            const qrContainer = document.getElementById('qrcode');
+            
+            let isQrCreated = false; // QR코드 중복 생성 방지 플래그
+
+            // --- 1. 로그인 유효성 검사 (입력창 체크) ---
+            if (loginForm) {
+                loginForm.addEventListener('submit', (e) => {
+                    e.preventDefault(); // 폼 제출 방지
+                    
+                    const kakaoId = document.getElementById('kakaoId').value.trim();
+                    const kakaoPw = document.getElementById('kakaoPw').value.trim();
+
+                    if (!kakaoId) {
+                        alert('카카오메일 아이디, 이메일 또는 전화번호를 입력해 주세요.');
+                        document.getElementById('kakaoId').focus();
+                        return;
+                    }
+
+                    if (!kakaoPw) {
+                        alert('비밀번호를 입력해 주세요.');
+                        document.getElementById('kakaoPw').focus();
+                        return;
+                    }
+
+                    // 모든 조건 만족 시
+                    alert('로그인 처리 중입니다.');
+                    // loginForm.submit(); // 실제 서버 연결 시 주석 해제
+                });
+            }
+
+            // --- 2. QR 코드 모달 제어 함수 ---
+            
+            // 모달 열기
+            const openModal = () => {
+                if (qrModal) {
+                    qrModal.style.display = 'flex'; // 중앙 정렬을 위해 flex 사용
+                    
+                    // 처음 열 때만 QR코드 생성
+                    if (!isQrCreated && qrContainer) {
+                        new QRCode(qrContainer, {
+                            text: "https://kakao.com/login/auth", // QR 스캔 시 이동할 주소
+                            width: 160, // 8rem (1rem=20px 기준)
+                            height: 160,
+                            colorDark : "#000000",
+                            colorLight : "#ffffff"
+                        });
+                        isQrCreated = true;
+                    }
+                }
+            };
+
+            // 모달 닫기
+            const closeModal = () => {
+                if (qrModal) {
+                    qrModal.style.display = 'none';
+                }
+            };
+
+            // --- 3. 이벤트 리스너 연결 ---
+            
+            // QR코드 로그인 버튼 클릭 시
+            if (btnQrLogin) {
+                btnQrLogin.addEventListener('click', openModal);
+            }
+
+            // 닫기 버튼(X) 클릭 시
+            if (btnQrClose) {
+                btnQrClose.addEventListener('click', closeModal);
+            }
+
+            // 배경(어두운 영역) 클릭 시 닫기
+            if (qrOverlay) {
+                qrOverlay.addEventListener('click', closeModal);
+            }
+
+            // ESC 키 눌렀을 때 닫기 (사용자 편의성)
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && qrModal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>

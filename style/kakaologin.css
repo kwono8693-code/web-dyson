@@ -1,0 +1,316 @@
+.box-kakao-login {
+    margin: 5rem 0; /* 기존 100px */
+    display: flex;
+    justify-content: center;
+}
+
+.kakao-container {
+    width: 100%;
+    max-width: 22.5rem;
+    padding: 5rem 1rem;
+}
+
+.kakao-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kakao-logo {
+    margin-bottom: 5rem;
+}
+
+.kakao-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kakao-input-row {
+    border-bottom: 0.1rem solid #000;
+    margin-bottom: 0;
+}
+
+.kakao-input-row input {
+    width: 100%;
+    height: 50px; 
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+}
+
+.save-area {
+    margin: .5rem 0 2rem;
+}
+
+.kakao-check-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.kakao-check-item input {
+    display: none;
+}
+
+/* 커스텀 원형 체크박스 */
+.custom-circle {
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 0.05rem solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+}
+
+.kakao-check-item input:checked + .custom-circle {
+    background-color: #fee500;
+    border-color: #fee500;
+}
+
+.kakao-check-item input:checked + .custom-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.check-text {
+    font-size: 0.65rem;
+    color: #333;
+}
+
+.btn-kakao-submit {
+    width: 100%;
+    height: 3rem;
+    background-color: #fee500;
+    border: none;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.kakao-divider {
+    width: 100%;
+    position: relative;
+    margin: .5rem 0;
+    text-align: center;
+}
+
+.kakao-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.05rem;
+    background-color: #eee;
+    z-index: 1;
+}
+
+.kakao-divider span {
+    position: relative;
+    background-color: #fff;
+    padding: 0 1rem;
+    font-size: 0.6rem;
+    color: #888;
+    z-index: 2;
+}
+
+.qr-area {
+    width: 100%;
+}
+
+.btn-kakao-qr {
+    width: 100%;
+    height: 3rem;
+    background-color: #f2f2f2;
+    border: none;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.qr-display {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 0.05rem solid #ddd;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.qr-display canvas {
+    margin: 0 auto;
+}
+
+.qr-notice {
+    font-size: 0.6rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* 모달 전체 컨테이너 */
+.qr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 배경 어둡게 */
+.qr-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 팝업 박스 */
+.qr-content {
+    position: relative;
+    width: 15rem; /* 300px */
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    z-index: 1001;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+.qr-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* 닫기 버튼 */
+.btn-qr-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* QR 이미지 크기 조정 */
+#qrcode img {
+    width: 8rem !important; /* 160px */
+    height: 8rem !important;
+}
+
+.qr-notice {
+    font-size: 0.65rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.kakao-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    font-size: 0.65rem;
+}
+
+.kakao-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.link-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.split-bar {
+    width: 0.05rem;
+    height: 0.6rem;
+    background-color: #ccc;
+}
+/* kakao-box 하단에 붙는 푸터 정보 영역 */
+.kakao-footer-info {
+    width: 100%;
+    margin-top: 5rem; /* 상단 콘텐츠와의 간격 100px */
+    padding-bottom: 1rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* 링크와 카피라이트 사이 간격 20px */
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* 요소들 사이 간격 - 소수점 유지 */
+    font-size: 0.6rem; /* 약 12px */
+    color: #333;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-links strong {
+    font-weight: 700;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#langSelect{
+    border: none;
+    font: inherit;
+}
+
+/* 세로 구분선 */
+.footer-bar {
+    width: 0.05rem;
+    height: 0.5rem;
+    background-color: #ccc;
+    margin: 0 0.5rem; /* 좌우 여백 합쳐서 약 1rem 느낌으로 조절 가능 */
+}
+
+.copyright {
+    font-size: 0.6rem;
+    color: #333;
+    letter-spacing: 0;
+    margin-top: 0.5rem;
+}
+
+/* 모바일 대응: 화면이 좁아지면 링크들이 줄바꿈되도록 설정 */
+@media (max-width: 22.5rem) {
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}

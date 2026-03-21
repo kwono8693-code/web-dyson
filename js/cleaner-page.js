@@ -192,7 +192,18 @@ function sortProducts(type) {
     updateProductGrid(filteredList); 
 }
 
-// 렌더링만 전담하는 함수 (기존 displayProducts와 동일)
+// 1. 컨테이너에 클릭 이벤트 리스너 등록 (이벤트 위임)
+container.addEventListener('click', (e) => {
+    // 클릭된 요소가 'btn-cart' 클래스를 가지고 있는지 확인
+    if (e.target.classList.contains('btn-cart')) {
+        // 기본 링크 이동(href) 방지
+        e.preventDefault();
+        
+        // 알림창 띄우기
+        alert('장바구니에 상품을 추가했습니다.');
+    }
+});
+
 function updateProductGrid(items) {
     container.innerHTML = items.map(item => {
         const isSale = /할인가/.test(item.price);
@@ -212,7 +223,7 @@ function updateProductGrid(items) {
                 </div>
             </a>
             
-            <a href="./index.html" class="btn-cart">장바구니 담기</a>
+            <a href="#" class="btn-cart">장바구니 담기</a>
         </article>
         `;
     }).join('');

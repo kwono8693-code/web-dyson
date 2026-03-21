@@ -14,7 +14,7 @@ main{
 }
 .login {
     /* 기존 5rem margin-top을 제거해야 완전한 중앙에 옵니다 */
-    width: 320px;
+    max-width: 320px;
     padding: 2rem;
     display: flex;
     flex-direction: column;

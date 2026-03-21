@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart-page</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+    <link rel="stylesheet" href="./style/cart.css">
+</head>
+<body>
+   <div id="site-header"></div>
+   
+    <main>
+        <div class="common-frame">
+            <section class="cart-section">
+                <h2 class="cart-title">CART</h2>
+                
+                <div class="cart-table-wrap">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="checkAll" checked></th>
+                                <th>상품정보</th>
+                                <th>수량</th>
+                                <th>상품금액</th>
+                                <th>할인금액</th>
+                                <th>배송구분</th>
+                                <th>배송비</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartList">
+                            <tr class="cart-item">
+                                <td><input type="checkbox" class="item-check" checked></td>
+                                <td class="product-info">
+                                    <img src="./img/product-styler5.jpg" alt="상품이미지">
+                                    <span>다이슨 에어랩 I.d.™ 멀티 스타일러 앤 드라이어(블루/코퍼)</span>
+                                </td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button type="button" class="btn-minus">-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button type="button" class="btn-plus">+</button>
+                                    </div>
+                                </td>
+                                <td><span class="unit-price" data-price="629000">₩ 629,000</span></td>
+                                <td><span class="discount-price" data-discount="70000">- ₩ 70,000</span></td>
+                                <td>기본배송</td>
+                                <td>무료</td>
+                                <td><button type="button" class="btn-delete">×</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-sub-actions">
+                    <div class="left-btns">
+                        <button type="button" id="btnDeleteSelected">선택삭제</button>
+                        <button type="button" id="btnClearCart">장바구니 비우기</button>
+                    </div>
+                    <div class="right-btns">
+                        <button type="button" onclick="window.print()">견적서 출력</button>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-box">
+                        <dl><dt>총 상품금액</dt><dd id="totalProductPrice">₩ 0</dd></dl>
+                        <span class="operator">+</span>
+                        <dl><dt>총 배송비</dt><dd id="totalDeliveryPrice">₩ 0</dd></dl>
+                        <span class="operator">=</span>
+                        <dl class="total"><dt>결제예정금액</dt><dd id="finalPaymentPrice">₩ 0</dd></dl>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <div class="action-spacer"></div>
+
+                    <div class="main-order-btns">
+                        <button type="button" class="btn-order-all">전체상품주문</button>
+                        <button type="button" class="btn-order-select">선택상품주문</button>
+                    </div>
+
+                    <div class="sub-action-btn">
+                        <a href="#" class="btn-continue">계속 쇼핑하기</a>
+                    </div>
+                </div>
+
+                <div class="cart-info-section">
+                    <h3 class="info-title">이용안내</h3>
+                    <div class="info-content">
+                        <div class="info-group">
+                            <h4>배송 정보</h4>
+                            <ul>
+                                <li>구매하신 모든 제품 및 부품은 무료로 배송되며 평일 오전 10시 이전 주문 시 당일 출고, 익일 상품 배송을 목표로 합니다.</li>
+                                <li>웹사이트 판매 약관에 따라 재판매를 위한 구매가 의심되는 경우 출고에 제한이 발생할 수 있습니다.</li>
+                                <li>보증 범위 예외 사항 등 보다 더 자세한 사항은 제품 본 공식 홈페이지 하단의 판매약관을 참조하여 주시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                        <div class="info-group">
+                            <h4>현금 영수증</h4>
+                            <ul>
+                                <li>현금 영수증 발행을 원하시는 경우, 결제창에서 소득공제용(개인) / 지출증빙용(법인)을 통해 발행 받으실 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <div class="info-group">
+                            <h4>교환 · 반품 안내</h4>
+                            <ul>
+                                <li>공식몰(Dyson.co.kr)에서 구매하신 제품은 7일 이내에 무료반품 및 환불이 가능합니다. (단, 리퍼브 제품 및 제품의 현저한 훼손 시 반품 및 환불 불가)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartList = document.getElementById('cartList');
+            const totalProductElem = document.getElementById('totalProductPrice');
+            const finalPaymentElem = document.getElementById('finalPaymentPrice');
+            const checkAll = document.getElementById('checkAll');
+
+            const formatPrice = (num) => '₩ ' + num.toLocaleString();
+
+            // 1. 가격 계산 로직
+            const updateTotalPrice = () => {
+                const items = document.querySelectorAll('.cart-item');
+                let totalProduct = 0;
+                let totalDiscount = 0;
+
+                items.forEach(item => {
+                    const isChecked = item.querySelector('.item-check').checked;
+                    if (isChecked) {
+                        const qty = parseInt(item.querySelector('.quantity-input').value);
+                        const unitPrice = parseInt(item.querySelector('.unit-price').dataset.price);
+                        const unitDiscount = parseInt(item.querySelector('.discount-price').dataset.discount);
+                        
+                        totalProduct += unitPrice * qty;
+                        totalDiscount += unitDiscount * qty;
+                    }
+                });
+
+                totalProductElem.innerText = formatPrice(totalProduct);
+                finalPaymentElem.innerText = formatPrice(totalProduct - totalDiscount);
+
+                // 장바구니가 완전히 비었을 때 처리
+                if (items.length === 0) {
+                    cartList.innerHTML = '<tr><td colspan="8" class="empty-msg">장바구니에 담긴 상품이 없습니다.</td></tr>';
+                }
+            };
+
+            // 2. 개별 아이템 이벤트 위임
+            cartList.addEventListener('click', (e) => {
+                const target = e.target;
+                const row = target.closest('.cart-item');
+                if (!row) return;
+
+                const qtyInput = row.querySelector('.quantity-input');
+
+                if (target.classList.contains('btn-plus')) {
+                    qtyInput.value = parseInt(qtyInput.value) + 1;
+                } else if (target.classList.contains('btn-minus')) {
+                    if (parseInt(qtyInput.value) > 1) qtyInput.value = parseInt(qtyInput.value) - 1;
+                } else if (target.classList.contains('btn-delete')) {
+                    if (confirm("상품을 삭제하시겠습니까?")) row.remove();
+                }
+                updateTotalPrice();
+            });
+
+            // 3. 상단 체크박스 전체 선택/해제
+            checkAll.addEventListener('change', () => {
+                const checks = document.querySelectorAll('.item-check');
+                checks.forEach(cb => cb.checked = checkAll.checked);
+                updateTotalPrice();
+            });
+
+            // 4. 보조 버튼 기능 (선택삭제, 비우기)
+            document.getElementById('btnDeleteSelected').addEventListener('click', () => {
+                const selected = document.querySelectorAll('.item-check:checked');
+                if (selected.length === 0) return alert("삭제할 상품을 선택해주세요.");
+                if (confirm("선택한 상품을 삭제하시겠습니까?")) {
+                    selected.forEach(cb => cb.closest('.cart-item').remove());
+                    updateTotalPrice();
+                }
+            });
+
+            document.getElementById('btnClearCart').addEventListener('click', () => {
+                if (confirm("장바구니를 모두 비우시겠습니까?")) {
+                    const items = document.querySelectorAll('.cart-item');
+                    items.forEach(item => item.remove());
+                    updateTotalPrice();
+                }
+            });
+
+            // 5. 주문 로직 (상품 유무 체크)
+            const handleOrder = (isSelectOnly) => {
+                const items = document.querySelectorAll('.cart-item');
+                const selected = document.querySelectorAll('.item-check:checked');
+
+                if (items.length === 0) {
+                    alert('장바구니에 주문할 상품이 없습니다.');
+                    return;
+                }
+
+                if (isSelectOnly && selected.length === 0) {
+                    alert('주문할 상품을 선택해주세요.');
+                    return;
+                }
+
+                alert('주문이 완료되었습니다.');
+            };
+
+            document.querySelector('.btn-order-all').addEventListener('click', () => handleOrder(false));
+            document.querySelector('.btn-order-select').addEventListener('click', () => handleOrder(true));
+
+            // 초기화
+            updateTotalPrice();
+        });
+    </script>
+
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>

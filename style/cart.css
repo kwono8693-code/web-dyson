@@ -1,0 +1,197 @@
+.cart-section {
+    padding: 10rem 0;
+    width: 100%;
+    max-width: 60rem; /* 1200px */
+    margin: 0 auto;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* 테이블 스타일 */
+.cart-table-wrap { width: 100%; overflow-x: auto; }
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 40rem; /* 모바일 대응 최소 너비 */
+    font-size: 0.65rem;
+}
+
+.cart-table th {
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0.5rem;
+    background: #f9f9f9;
+}
+
+.cart-table td {
+    padding: 1.5rem 0.5rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.product-info { display: flex; align-items: center; gap: 0.5rem; text-align: left; }
+.product-info img { width: 4rem; height: auto; }
+
+/* 수량 조절 버튼 */
+.quantity-control {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    align-items: center;
+}
+.quantity-control button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+.quantity-input {
+    width: 2rem;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 0.7rem;
+}
+
+/* 합계 영역 */
+.cart-summary {
+    margin-top: 3rem;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 2rem 0;
+}
+.summary-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.summary-box dl { text-align: center; }
+.summary-box dt { font-size: 0.7rem; color: #666; margin-bottom: 0.5rem; }
+.summary-box dd { font-size: 1rem; font-weight: bold; }
+.summary-box .operator { font-size: 1.2rem; color: #999; }
+.summary-box .total dd { color: #000; font-size: 1.2rem; }
+
+.cart-actions {
+    display: flex;
+    align-items: center;
+    justify-content: border-between; /* 양 끝으로 밀어내기 기반 */
+    margin-top: 2.5rem;
+    width: 100%; /* common-frame 내부 너비 가득 채움 */
+}
+
+/* 양쪽 사이드 박스에 동일한 힘(flex: 1)을 주어 중앙 박스를 가운데로 고정 */
+.action-spacer, 
+.sub-action-btn {
+    flex: 1; 
+    display: flex;
+}
+
+.sub-action-btn {
+    justify-content: flex-end; /* 쇼핑하기 버튼만 오른쪽 끝으로 정렬 */
+}
+
+.main-order-btns {
+    display: flex;
+    gap: 0.5rem;
+    flex: 0 0 auto; /* 중앙 버튼들은 자기 크기 유지 */
+}
+
+/* 계속 쇼핑하기 버튼 스타일 (작게 유지) */
+.btn-continue {
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+}
+.btn-order-all {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: .5rem 1rem;
+}
+.btn-order-select {
+    background: #999;
+    color: #fff;
+    border: none;
+    padding: .5rem 1rem;
+}
+
+
+/* 중간 보조 버튼 레이아웃 */
+.cart-sub-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.cart-sub-actions button {
+    height: 1.5rem;
+    padding: 0 0.8rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 0.6rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-sub-actions .left-btns { display: flex; gap: 0.3rem; }
+
+/* 빈 장바구니 알림 스타일 */
+.empty-msg {
+    text-align: center;
+    padding: 5rem 0;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* 이용안내 섹션 스타일 */
+.cart-info-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    text-align: left;
+}
+
+.info-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.info-group {
+    margin-bottom: 1.5rem;
+}
+
+.info-group h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--pt-blue);
+    margin-bottom: 0.5rem;
+}
+
+.info-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-group li {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 0.2rem;
+    position: relative;
+    padding-left: 0.2rem;
+}
