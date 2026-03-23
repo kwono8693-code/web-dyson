@@ -61,7 +61,7 @@
 
 .hero-img video{
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     object-fit: cover;
 }
 
@@ -71,7 +71,7 @@
 .center-detail-grid {
     display: flex;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .center-text-info {
@@ -84,9 +84,6 @@
     margin-bottom: 1.5rem;
 }
 
-.info-item .icon { font-size: 1.2rem; }
-.info-item strong { display: block; font-size: 0.75rem; margin-bottom: 0.3rem; }
-.info-item p { font-size: 0.7rem; color: #666; line-height: 1.5; }
 
 /* 구글 맵 컨테이너 */
 .center-map {
@@ -104,24 +101,20 @@
 }
 
 .category-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .category-header .section-title {
+
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
-
-/* 카테고리 리스트 레이아웃 */
-.category-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+.cate-slider2{
+    padding: 1rem;
 }
-
-.category-list li {
-    flex: 1; /* 5개가 균등한 너비 차지 */
+.category-list a{
+    min-height: 200px;
 }
 
 /* 개별 아이콘 박스 스타일 */
@@ -136,6 +129,7 @@
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease; /* 애니메이션 속도 */
+    height: 100%;
 }
 
 /* 마우스 오버(Hover) 효과 */
@@ -147,7 +141,7 @@
 
 .category-item .img-box {
     width: 100%;
-    height: 100%
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,4 +315,56 @@
     font-size: 0.7rem;
     color: #999;
 }
+.service-center-info{
+    margin-bottom: 5rem;
+}
 
+.service-center-info h3{
+    font-size: 1.6rem;
+    padding: 1.5rem .5rem;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1rem;
+}
+.info-item h4{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+.center-map{
+    min-height: 5rem;
+    height: inherit;
+}
+.step-container figure img{
+    height: 1.2rem;
+}
+
+@media (max-width:768px){
+    .as-hero {
+        flex-direction: column;
+        padding-top: 8rem;
+    }
+    .hero-img video{
+        min-height: 200px;
+    }
+    .search-box-container {
+        flex-direction: column;
+    }
+    .step-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .step-item {
+        flex: 1;
+        min-height: 100px;
+        align-self: center;
+        width: 50%;
+    }
+    .step-container figure{
+        /* align-self: flex-start; */
+    }
+    .step-container figure img {
+        transform: rotate(90deg); 
+    }
+    .center-detail-grid {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,98 @@
+/* 상단 카테고리 내비게이션 */
+.b2b-category {
+    padding-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.b2b-category li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.b2b-category img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* 비즈니스 테크놀로지 (Hero) */
+.b2b-hero{
+    background: url(../img/b2b-banner-pc.jpg) no-repeat 50% 50% / contain;
+    min-height: 600px;
+    margin-bottom: 5rem;
+}
+
+.b2b-intro{
+    margin-bottom: 5rem;
+}
+.b2b-intro h1{
+    margin-bottom: 1rem;
+}
+
+/* 기업 고객 혜택 그리드 */
+.b2b-benefits {
+    margin-bottom: 5rem;
+}
+.b2b-benefits h1{
+    margin-bottom: 1rem;
+}
+
+.benefit-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.benefit-card {
+    flex: 1;
+    height: 6rem;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.benefit-card:hover {
+    background-color: #f9f9f9;
+}
+
+.benefit-card img {
+    height: 2.5rem;
+}
+
+.benefit-card span {
+    text-align: center;
+}
+
+@media (max-width:1024px){
+    .b2b-hero {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .b2b-hero{
+        background: url(../img/b2b-banner-mo.jpg) no-repeat 50% 50% / contain;
+        min-width: 400px;
+    }
+    .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 400px) {
+    .b2b-hero{
+        background: url(../img/b2b-banner-mo.jpg) no-repeat 50% 50% / contain;
+        min-width: 250px;
+        min-height: 350px;
+    }
+}

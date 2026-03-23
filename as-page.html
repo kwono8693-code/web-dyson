@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/footer.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./style/as.css">
 </head>
 <body>
@@ -28,15 +30,12 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <video src="./img/video-air.mp4" autoplay muted loop></video>
+                    <video src="./img/as-banner.mp4" autoplay muted loop></video>
                 </div>
             </section>
 
             <section class="model-search">
                 <div class="search-box-container">
-                    <div class="serial-img">
-                        <img src="./img/as-serialnumber.jpg" alt="시리얼 넘버 예시">
-                    </div>
                     <div class="search-input-group">
                         <h3>제품 모델명 검색</h3>
                         <p>다이슨 제품 일련번호를 입력하세요.</p>
@@ -49,6 +48,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="serial-img">
+                        <img src="./img/as-serialnumber.jpg" alt="시리얼 넘버 예시">
+                    </div>
                 </div>
             </section>
 
@@ -57,39 +59,62 @@
                     <h3 class="section-title">어떤 제품에 문제가 있나요?</h3>
                     <p class="section-desc">서비스 옵션 및 일반적인 서비스 예상 비용을 확인해 보세요.</p>
                 </div>
+                
+                <div class="swiper cate-slider2">
+                    <ul class="swiper-wrapper category-list">
+                        <li class="swiper-slide">
+                            <a href="#" class="category-item">
+                                <div class="img-box"><img src="./img/as-hair.png" alt="헤어케어"></div>
+                                <span>헤어케어</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="category-item">
+                                <div class="img-box"><img src="./img/as-cleaner.png" alt="청소기"></div>
+                                <span>청소기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="category-item">
+                                <div class="img-box"><img src="./img/as-air.png" alt="공기청정기"></div>
+                                <span>공기청정기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="category-item">
+                                <div class="img-box"><img src="./img/as-headphone.png" alt="헤드폰"></div>
+                                <span>헤드폰</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#" class="category-item">
+                                <div class="img-box"><img src="./img/as-light.png" alt="조명"></div>
+                                <span>조명</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    const cateSlider = new Swiper(".cate-slider2",{
+                        slidesPerView: 2.5,
+                        spaceBetween: 14,
+                        breakpoints: {
+                            400:{
+                                slidesPerView: 2.5,
+                                spaceBetween: 14,
+                            },
+                            768:{
+                                slidesPerView: 5,
+                                spaceBetween: 18,
+                            },
+                            1440:{
+                                slidesPerView: 5,
+                                spaceBetween: 20,
+                            },
+                        }
+                    })
+                </script>
 
-                <ul class="category-list">
-                    <li>
-                        <a href="#" class="category-item">
-                            <div class="img-box"><img src="./img/as-hair.png" alt="헤어케어"></div>
-                            <span>헤어케어</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="category-item">
-                            <div class="img-box"><img src="./img/as-cleaner.png" alt="청소기"></div>
-                            <span>청소기</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="category-item">
-                            <div class="img-box"><img src="./img/as-air.png" alt="공기청정기"></div>
-                            <span>공기청정기</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="category-item">
-                            <div class="img-box"><img src="./img/as-headphone.png" alt="헤드폰"></div>
-                            <span>헤드폰</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="category-item">
-                            <div class="img-box"><img src="./img/as-light.png" alt="조명"></div>
-                            <span>조명</span>
-                        </a>
-                    </li>
-                </ul>
             </section>
 
             <section class="as-description">
@@ -151,35 +176,39 @@
                 <div class="center-detail-grid">
                     <div class="center-text-info">
                         <div class="info-item">
-                            <span class="icon">📍</span>
                             <div class="text">
-                                <strong>주소</strong>
-                                <p>인천 연수구 하모니로138번길 11 송도캐슬센트럴파크 213호</p>
+                                <h4>이름</h4>
+                                <p>다이슨 인천 송도 프로페셔널 서비스센터</p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="icon">⏰</span>
                             <div class="text">
-                                <strong>운영시간</strong>
+                                <h4>주소</h4>
+                                <p>인천 연수구 하모니로138번길 11 송도캐슬센트럴파크 313호</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="text">
+                                <h4>운영시간</h4>
                                 <p>평일(월-금요일) 09:00 - 18:00<br>토요일 09:00 - 13:00<br>일요일·공휴일 휴무</p>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="icon">📞</span>
                             <div class="text">
-                                <strong>TEL</strong>
-                                <p>1544-2233</p>
+                                <h4>TEL</h4>
+                                <p>1544-2283</p>
                             </div>
                         </div>
                     </div>
                     <div class="center-map">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.123456789!2d126.6385!3d37.3825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDIyJzU3LjAiTiAxMjbcsDM4JzE4LjYiRQ!5e0!3m2!1sko!2skr!4v1234567890" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.817346851415!2d126.64010727633276!3d37.38234853434693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b77479b3f446d%3A0xe52503926ce49e9!2z7J247LKc6rSR7Jet7IucIOyXsOyImOq1rCDtlZjitems66GcMTM467KI6ri4IDEx!5e0!3m2!1sko!2skr!4v1710000000000!5m2!1sko!2skr" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
                             allowfullscreen="" 
-                            loading="lazy">
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
