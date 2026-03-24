@@ -113,12 +113,10 @@
 .cate-slider2{
     padding: 1rem;
 }
-.category-list a{
-    min-height: 200px;
-}
 
 /* 개별 아이콘 박스 스타일 */
 .category-item {
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +127,6 @@
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease; /* 애니메이션 속도 */
-    height: 100%;
 }
 
 /* 마우스 오버(Hover) 효과 */

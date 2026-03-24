@@ -130,6 +130,80 @@ header.open .mega-menu {
 .menu-smart-hidden{
     display: none;
 }
+/* 검색창 부모 li */
+.icon-menu li {
+    position: relative;
+}
+
+/* 작고 간결한 검색창 */
+.search-overlay {
+    position: absolute;
+    top: 100px; 
+    right: 0;
+    min-width: 350px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    display: none; /* 초기 숨김 */
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.search-overlay.active {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.search-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.3rem;
+}
+
+.search-inner input {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+/* 검색 실행 버튼 */
+.btn-search-submit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-search-submit img {
+    width: 1rem;
+}
+
+/* 닫기 버튼 (X) */
+.btn-search-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #999;
+    padding: 0 0.2rem;
+    transition: color 0.2s;
+}
+
+.btn-search-close:hover {
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 @media (max-width:1440px){
     .header-pc{

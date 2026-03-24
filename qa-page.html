@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qa-page</title>
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="./style/dyson.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/system.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
+    <link rel="stylesheet" href="./style/qa.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <div class="common-frame">
+            
+            <section class="qna-intro">
+                <div class="intro-img">
+                    <img src="./img/qa.jpg" alt="1:1 문의 안내 이미지">
+                </div>
+                <div class="breadcrumb">
+                    HOME / 고객지원 / <strong>1:1 문의</strong>
+                </div>
+                <div class="intro-text">
+                    <h1>1:1 문의</h1>
+                    <p>1:1 문의 게시판입니다.</p>
+                    <p class="sub-desc">1:1 문의는 로그인 후 이용 가능하며, <br>답변은 영업일 기준 최대 2일 소요됩니다. (주말/공휴일 제외)</p>
+                </div>
+            </section>
+
+            <button type="button" id="openModalBtn" class="btn-qna-primary">1:1 문의하기</button>
+
+            <section class="qna-board">
+                <p class="empty-msg">검색결과가 없습니다.</p>
+                <div class="search-form">
+                    <select name="searchType" id="searchType">
+                        <option value="title">제목</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <button type="button" class="btn-search">SEARCH</button>
+                </div>
+            </section>
+
+            <div class="modal-overlay" id="qnaModalLayer">
+                <div class="modal-window">
+                    <div class="modal-header">
+                        <h3>1:1 문의 작성</h3>
+                        <button type="button" class="btn-x-close">&times;</button>
+                    </div>
+                    <form id="qnaSubmitForm">
+                        <div class="form-group">
+                            <label for="qnaTitle">제목</label>
+                            <input type="text" id="qnaTitle" placeholder="제목을 입력해 주세요." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="qnaContent">내용</label>
+                            <textarea id="qnaContent" placeholder="문의 내용을 상세히 작성해 주세요." required></textarea>
+                        </div>
+                        <div class="modal-footer-btns">
+                            <button type="button" class="btn-cancel">취소</button>
+                            <button type="submit" class="btn-confirm">등록하기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // 페이지 로드가 완료된 후 실행되도록 보장
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 요소 선택
+            const modalLayer = document.getElementById('qnaModalLayer');
+            const openBtn = document.getElementById('openModalBtn');
+            const xCloseBtn = document.querySelector('.btn-x-close');
+            const cancelBtn = document.querySelector('.btn-cancel');
+            const qnaForm = document.getElementById('qnaSubmitForm');
+
+            // 1. 모달 열기 함수
+            const handleOpenModal = () => {
+                modalLayer.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // 배경 스크롤 차단
+            };
+
+            // 2. 모달 닫기 함수
+            const handleCloseModal = () => {
+                modalLayer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // 배경 스크롤 복구
+                qnaForm.reset(); // 입력 내용 초기화
+            };
+
+            // 이벤트 리스너 연결
+            if (openBtn) openBtn.addEventListener('click', handleOpenModal);
+            
+            // 닫기 버튼들 (X 버튼, 취소 버튼)
+            if (xCloseBtn) xCloseBtn.addEventListener('click', handleCloseModal);
+            if (cancelBtn) cancelBtn.addEventListener('click', handleCloseModal);
+
+            // 3. 모달 외부 영역 클릭 시 닫기
+            window.addEventListener('click', (event) => {
+                if (event.target === modalLayer) {
+                    handleCloseModal();
+                }
+            });
+
+            // 4. 폼 제출 핸들링
+            qnaForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // 실제 페이지 새로고침 방지
+                
+                const title = document.getElementById('qnaTitle').value;
+                
+                // 여기에 나중에 서버 전송 로직(Fetch/Axios)을 넣을 수 있습니다.
+                alert(`문의가 접수되었습니다.\n제목: ${title}`);
+                
+                handleCloseModal(); // 작성 완료 후 닫기
+            });
+        });
+    </script>
+    <div id="site-footer"></div> 
+
+    <script src="./js/include.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>
