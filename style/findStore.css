@@ -1,13 +1,13 @@
 /* 01. 상단 배너 섹션 */
 .store-banner-section {
     padding: 5rem 0; 
+    margin-bottom: 5rem;
 }
 .storebanner{
     display: flex;
     align-items: center;
     color: #fff;
     min-height: 400px;
-    border: 1px solid red;
 }
 .banner1{
     background: url(../img/storebanner1.jpg) no-repeat 50% 50% / cover;
@@ -31,126 +31,83 @@
 
 
 /* 02. 다이슨 스토어 목록 섹션 */
-.store-list-section {
-    padding: 4rem 0;
+.store-slider{
+    margin-bottom: 5rem;
 }
-
 .section-title {
-    font-size: 1.3rem; /* 26px */
+    font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .section-desc {
-    font-size: 0.75rem;
-    color: #666;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-/* 스토어 그리드 */
-.store-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 5rem;
-}
-
-.store-item {
-    /* 3열 기준, max-width로 너비 제한 */
-    flex: 1 1 calc(33.333% - 1.5rem);
-    min-width: 18rem; /* 모바일 대응을 위한 최소 너비 */
-    max-width: 20rem; /* 요소가 너무 커지지 않게 제한 */
-}
 
 /* 지도 스타일 */
 .store-map {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 11;
-    background-color: #eee;
-    margin-bottom: 1.2rem;
-    overflow: hidden;
-}
-
-.store-map img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: grayscale(1); /* 디자인에 맞게 그레이 처리 */
+    margin-bottom: 1.2rem;
+    aspect-ratio: 500 / 250;
+}
+.store-map iframe{
+    height: inherit;
+    width: 100%;
 }
 
-.map-marker {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1.6rem; /* 32px */
-    height: 1.6rem;
-    background: #ffcc00;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
+
 
 /* 스토어 정보 텍스트 */
 .store-name {
-    font-size: 0.95rem; /* 19px */
+    font-size: 1.15rem;
     font-weight: 700;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .store-info dl {
-    font-size: 0.75rem;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
 }
 
 .store-info dt {
     font-weight: 700;
-    margin-top: 0.3rem;
 }
-
-.store-info dd {
-    color: #444;
+.store-info dd{
+    margin-bottom: 1rem;
 }
-
+.store-info a{
+    display: flex;
+    gap: .5rem;
+}
+.store-info a img{
+    height: 1.2rem;
+}
 .btn-reservation {
-    font-size: 0.75rem;
-    color: #000;
-    text-decoration: underline;
     font-weight: 600;
 }
 
 /* 03. 하단 푸터 영역 */
 .store-footer {
     text-align: center;
-    padding-top: 3.5rem;
-    border-top: 1px solid #eee;
+    margin-bottom: 5rem;
 }
 
 .footer-label {
     font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1rem;
 }
 
-.footer-sub {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 1.5rem;
-}
+
 
 .btn-store-search {
+    margin-top: 2rem;
     background: #333;
     color: #fff;
     border: none;
-    padding: 0.8rem 3rem;
-    font-size: 0.8rem;
+    padding: 1rem 5rem;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 1rem;
 }
 
 .btn-store-search:hover {
