@@ -23,6 +23,7 @@
 }
 .banner-txt{
     padding-left: 6rem;
+    max-width: 550px;
 }
 .banner-txt h3{
     margin-bottom: 1rem;
