@@ -113,3 +113,15 @@
 .btn-store-search:hover {
     background: #000;
 }
+
+@media(max-width:768px){
+    .banner-txt {
+        padding-left: 4rem;
+    }
+
+}
+@media(max-width:500px){
+    .banner-txt {
+        padding-left: 2rem;
+    }
+}

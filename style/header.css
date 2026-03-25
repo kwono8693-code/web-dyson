@@ -315,4 +315,13 @@ header.open .mega-menu {
         width: auto;
         /* margin: 0 1rem; */
     }
+    .menu-content .lnb{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: .7rem;
+    }
+    .sub-menu {
+        justify-content: space-between;
+    }
 }

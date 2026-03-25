@@ -75,14 +75,14 @@
 
 @media (max-width:1024px){
     .b2b-hero {
-        min-height: 400px;
+        /* min-height: 400px; */
     }
 }
 
 @media (max-width: 768px) {
     .b2b-hero{
         background: url(../img/b2b-banner-mo.jpg) no-repeat 50% 50% / contain;
-        min-width: 400px;
+        /* min-width: 400px; */
     }
     .benefit-grid {
         display: grid;

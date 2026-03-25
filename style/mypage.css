@@ -1,0 +1,172 @@
+.mypage-welcome {
+    margin-bottom: 5rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.mypage-summary {
+    display: flex;
+    background-color: #eee;
+    padding: 4rem;
+    margin-bottom: 4rem; 
+}
+.summary-left {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding-right: 2rem;
+    text-align: center;
+}
+.summary-left p {
+    margin-bottom: 1rem;
+}
+.summary-left .grade {
+    color: #ff3333;
+    font-weight: 700;
+}
+.btn-grade-benefit {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem 3rem;
+    font-size: .8rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.summary-right {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+.summary-item {
+    text-align: center;
+    font-size: 1rem;
+    flex: 1;
+}
+.summary-item a{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.summary-item a img{
+    height: 3rem;
+}
+.summary-item strong {
+    color: #ff3333;
+    margin-left: 0.3rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid black;
+}
+.section-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.section-header h3 span {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #666;
+    margin-left: 1rem;
+}
+.btn-more {
+    font-size: 0.7rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.order-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1rem; 
+}
+
+.tab-btn {
+    flex: 1;
+    height: 3rem;
+    font-size: 0.8rem; 
+    font-weight: 500;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: -1px; 
+}
+
+.tab-btn:first-child {
+    margin-left: 0;
+}
+
+.tab-btn.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    z-index: 1; 
+}
+
+.order-process {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+.process-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.process-item img{
+    height: 4rem;
+}
+.process-item p {
+    font-size: 0.8rem;
+}
+.process-arrow {
+    width: 1rem;
+    height: 1rem;
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    transform: rotate(45deg);
+}
+
+.empty-data {
+    text-align: center;
+    padding: 5rem 0;
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 5rem;
+}
+
+.mypage-like {
+    margin-top: 5rem;
+}
+
+/* @media (max-width: 1024px) {
+    .mypage-summary {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .summary-left {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    .order-process {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+    .process-arrow {
+        display: none;
+    }
+} */
