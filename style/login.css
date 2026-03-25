@@ -1,26 +1,19 @@
-main{
-    margin: 0;
-    padding: 0;
-    /* 화면 전체를 기준으로 중앙 정렬하기 위한 설정 */
+.logpg{
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #fff;
+    justify-content: center;
 }
 .logo-login{
     margin-bottom: 2.5rem;
     text-align: center;
 }
 .login {
-    /* 기존 5rem margin-top을 제거해야 완전한 중앙에 옵니다 */
-    max-width: 320px;
-    padding: 2rem;
+    padding: 10rem 0;
+    min-width: 380px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 세로 중앙 */
-    align-items: center;     /* 가로 중앙 */
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 .logo-login {
     margin-bottom: 2.5rem;
@@ -58,7 +51,7 @@ main{
 }
 
 .remember-me input {
-    margin-right: 0.4rem; /* 8px */
+    margin-right: 0.4rem;
 }
 
 .btn-login {
@@ -119,4 +112,15 @@ main{
 .login-footer-links a {
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width:768px){
+    .login {
+        min-width: 300px;
+    }
+}
+@media (max-width:400px){
+    .login {
+        min-width: auto;
+    }
 }
