@@ -62,14 +62,14 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    margin-bottom: 0.3rem;
+    justify-content: space-between;
 }
 
 .input-group-with-btn input {
     padding: 0.4rem;
     font-size: 0.7rem;
     text-align: center;
-    width: 70%;
+    width: 100%;
 }
 
 .phone-prefix {
@@ -128,4 +128,20 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 1rem;
+}
+
+@media (max-width:768px){
+    .input-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+    .input-row div{
+        width: 100%;
+    }
+    .address{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
 }
