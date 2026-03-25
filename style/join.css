@@ -79,7 +79,6 @@
 }
 
 .btn-outline {
-    background: #fff;
     border: 1px solid #000;
     padding: 0.4rem 0.8rem;
     font-size: 0.6rem;
@@ -87,6 +86,8 @@
     white-space: nowrap;
     background-color: #333;
     color: #fff;
+    min-width: 100px;
+    min-height: 40px;
 }
 
 /* 약관 동의 */
@@ -128,6 +129,12 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 1rem;
+}
+@media (max-width:1024px){
+    .btn-outline {
+    min-width: 70px;
+    min-height: 30px;
+}
 }
 
 @media (max-width:768px){
