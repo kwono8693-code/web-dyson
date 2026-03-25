@@ -95,13 +95,8 @@ footer .common-frame h3{
 }
 
 
-/* footer3 */
 
-.footer3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
+
 
 
 /* 회사 정보 */
@@ -110,6 +105,7 @@ footer .common-frame h3{
     display: grid;
     grid-template-columns: 6.6rem 1fr;
     gap: 1rem 1rem;
+    margin-bottom: 1rem;
 }
 .company-info dd{
     font-weight:600;
@@ -123,6 +119,12 @@ footer .common-frame h3{
     align-items:center;
     gap:1rem;
     font-size:.8rem;
+    width: 100%;
+}
+.cert > div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* copyright */
@@ -179,17 +181,17 @@ footer > p{
         flex-direction: column-reverse;
         gap: 2rem;
     }
+    .company-info {
+        margin-bottom: 3rem;
+    }
+    .cert {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 @media (max-width:400px){
     .footer1 {
         display: flex;
-        flex-direction: column;
-    }
-    .company-info {
-        display: flex;
-        flex-direction: column;
-    }
-    .cert {
         flex-direction: column;
     }
 }
