@@ -43,6 +43,16 @@ p{
 .pc{
     display: block;
 }
+::-webkit-scrollbar{
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
 
 @media (max-width:1440px){
     html{

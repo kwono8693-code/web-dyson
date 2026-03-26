@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper1 = new Swiper('.station-banner', {
         direction: 'horizontal',
         loop: true,
+        spaceBetween: 20,
         speed: 1000,
         pagination: {
             el: ".swiper-pagination",

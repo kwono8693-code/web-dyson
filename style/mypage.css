@@ -1,5 +1,5 @@
 .mypage-wrap{
-    margin: 10rem;
+    margin: 10rem 0;
 }
 .mypage-welcome {
     text-align: center;
@@ -162,6 +162,7 @@
     .mypage-summary {
         flex-direction: column;
         gap: 2rem;
+        padding: 2rem 0;
     }
     .summary-left {
         border-right: none;
@@ -184,4 +185,9 @@
     .section-header h3 span {
         margin-left: 0;
     }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
+}

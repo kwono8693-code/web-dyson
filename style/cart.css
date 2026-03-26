@@ -1,7 +1,7 @@
 .cart-section {
     padding: 10rem 0;
     width: 100%;
-    max-width: 60rem; /* 1200px */
+    max-width: 60rem;
     margin: 0 auto;
 }
 
@@ -68,15 +68,28 @@
 }
 .summary-box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    flex-direction: column;
+    gap: .5rem;
 }
-.summary-box dl { text-align: center; }
-.summary-box dt { font-size: 0.7rem; color: #666; margin-bottom: 0.5rem; }
-.summary-box dd { font-size: 1rem; font-weight: bold; }
-.summary-box .operator { font-size: 1.2rem; color: #999; }
-.summary-box .total dd { color: #000; font-size: 1.2rem; }
+.summary-box dl { 
+    text-align: center; 
+}
+.summary-box dt { 
+    font-size: 0.8rem; 
+    color: #666; 
+}
+.summary-box dd {
+     font-size: 1rem; 
+     /* font-weight: 500;  */
+    }
+.summary-box .operator { 
+    font-size: 1.2rem; 
+    color: #999; 
+}
+.summary-box .total dd {
+      font-size: 1.3rem; 
+      font-weight: bold;
+    }
 
 .cart-actions {
     display: flex;
@@ -194,4 +207,314 @@
     margin-bottom: 0.2rem;
     position: relative;
     padding-left: 0.2rem;
+}
+@media (max-width:1024px){
+    .summary-box {
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-section {
+        padding: 5rem 2rem;
+        box-sizing: border-box;
+    }
+
+    .cart-title {
+        font-size: 1rem; /* 20px */
+        text-align: center;
+        font-weight: 700;
+        padding: 2rem 0;
+        border-bottom: 1px solid #000;
+        letter-spacing: 0.1rem;
+    }
+
+    /* 상단 액션 바 */
+    .cart-top-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+    }
+    .cart-top-actions label {
+        font-size: 0.9rem; /* 18px */
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .cart-top-actions button {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem; /* 14px */
+        cursor: pointer;
+    }
+
+    /* 장바구니 아이템 리스트 */
+    .cart-item {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    .item-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+    }
+    .btn-delete {
+        background: none;
+        border: 0;
+        font-size: 1.2rem;
+        color: #999;
+    }
+
+    .item-content {
+        display: flex;
+        gap: 1rem;
+    }
+    .product-img {
+        width: 5rem; /* 100px */
+        flex-shrink: 0;
+    }
+    .product-img img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .product-details {
+        flex: 1;
+    }
+    .product-name {
+        display: block;
+        font-size: 0.8rem; /* 16px */
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 0.4rem;
+    }
+    .model-info {
+        display: block;
+        font-size: 0.7rem; /* 14px */
+        color: #666;
+        margin-bottom: 0.8rem;
+    }
+    
+    .price-info .unit-price {
+        display: block;
+        font-size: 0.9rem; /* 18px */
+        font-weight: 700;
+        color: #0066ff; /* 다이슨 강조 컬러 블루 */
+    }
+    .price-info .discount-price {
+        display: block;
+        font-size: 0.7rem;
+        color: #0066ff;
+        margin-top: 0.2rem;
+    }
+
+    .item-bottom {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    /* 수량 조절 */
+    .quantity-control {
+        display: flex;
+        border: 1px solid #ddd;
+        align-items: center;
+    }
+    .quantity-control button {
+        width: 2rem;
+        height: 2rem;
+        background: #fff;
+        border: 0;
+        font-size: 1rem;
+    }
+    .quantity-control input {
+        width: 2.5rem;
+        height: 2rem;
+        text-align: center;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    /* 이미지와 동일한 요약 박스 (Summary) */
+    .cart-summary {
+        margin-top: 2rem;
+        border-top: 2px solid #000;
+    }
+    .summary-box dl {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.2rem 0;
+        font-size: 0.8rem;
+    }
+    .summary-box dl dt { font-weight: 500; color: #333; }
+    .summary-box dl dd { font-weight: 700; text-align: right; }
+    .summary-box dl dd.minus { color: #0066ff; }
+
+    /* 하단 주문 예상 금액 강조 */
+    .summary-box dl.total {
+        border-top: 1px solid #000;
+        padding: 1.5rem 0;
+        margin-top: 1rem;
+    }
+    .summary-box dl.total dt {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+    .summary-box dl.total dd {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    /* 주문 버튼 섹션 */
+    .cart-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .cart-actions button {
+        width: 100%;
+        height: 3rem; /* 60px */
+        border: 0;
+        font-weight: 700;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+    .btn-order-all { background: #444; color: #fff; }
+    .btn-order-select { background: #999; color: #fff; }
+
+    .sub-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding-bottom: 3rem;
+    }
+    .sub-links a {
+        font-size: 0.7rem;
+        color: #666;
+        text-decoration: underline;
+    }
+    /* 모바일 요약 박스 전체 컨테이너 */
+    .cart-summary.mo {
+        padding: 2rem 1rem;
+        background: #fff;
+    }
+
+    .summary-box {
+        width: 100%;
+    }
+
+    /* 항목별 줄 정렬 (왼쪽: 이름, 오른쪽: 값) */
+    .summary-box dl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .summary-box dt {
+        font-size: 0.85rem; /* 약 17px */
+        color: #333;
+        font-weight: 500;
+    }
+
+    .summary-box dd {
+        font-size: 0.9rem; /* 약 18px */
+        color: #333;
+        font-weight: 600;
+        text-align: right;
+    }
+
+    /* 할인 금액 파란색 강조 */
+    #totalDiscountPriceMo.minus {
+        color: #4b7dff; /* 피그마의 파란색 */
+    }
+
+    /* 구분선 */
+    .summary-divider {
+        border: 0;
+        border-top: 1px solid #dbdbdb;
+        margin: 1.5rem 0;
+    }
+
+    /* 최종 주문 예상 금액 강조 라인 */
+    .total-row {
+        margin-top: 0.5rem;
+    }
+
+    .total-row dt {
+        font-size: 1rem; /* 20px */
+        font-weight: 800;
+        color: #000;
+    }
+
+    .total-row dd {
+        font-size: 1.1rem; /* 22px */
+        font-weight: 800;
+        color: #000;
+    }
+
+    /* 적립금 라인 (작고 연하게) */
+    .points-row {
+        margin-top: 1rem;
+    }
+    .points-row dt, .points-row dd {
+        font-size: 0.75rem;
+        color: #888;
+        font-weight: 400;
+    }
+
+    /* 주문 버튼 스타일 (피그마 기준 꽉 차는 버튼) */
+    .cart-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-top: 2rem;
+    }
+
+    .cart-actions button {
+        width: 100%;
+        height: 3.5rem; /* 70px */
+        font-size: 0.9rem;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-order-all {
+        background: #413a3a; /* 진한 브라운/그레이 */
+        color: #fff;
+    }
+
+    .btn-order-select {
+        background: #a39b9b; /* 연한 브라운/그레이 */
+        color: #fff;
+    }
+
+    /* 견적서 출력 및 쇼핑 계속하기 */
+    .sub-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .sub-links a, .btn-quote {
+        font-size: 0.75rem;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #333;
+        padding-bottom: 2px;
+    }
+
+    .summary-top{
+        border: 1px solid red;
+    }
 }
