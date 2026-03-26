@@ -1,7 +1,8 @@
-/* 상단 비주얼 */
+.acc-wrap{
+    margin-top: 10rem;
+}
 .accessory-visual {
     text-align: center;
-    padding-top: 10rem;
 }
 .accessory-visual h1 {
     margin-bottom: 1rem;

@@ -207,7 +207,8 @@
 
 .sort-list li:hover {
     font-weight: bold;
-    background-color: #f9f9f9;
+    background-color: var(--pt-blue);
+    color: #fff;
 }
 @media (max-width:1440px){
     .banner {

@@ -20,9 +20,7 @@
     text-align: center;
 }
 
-.logo-login img {
-    width: 4.5rem;
-}
+
 
 .login form {
     width: 100%;
@@ -39,6 +37,7 @@
     border-bottom: 1px solid #000;
     font-size: 0.7rem; 
     outline: none;
+    padding-left: .5rem;
 }
 
 .remember-me {

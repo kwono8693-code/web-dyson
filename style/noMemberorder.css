@@ -48,6 +48,7 @@
     font-size: .7rem;
     outline: none;
     box-sizing: border-box;
+    padding-left: .5rem;
 }
 
 /* 버튼 스타일 */
@@ -74,7 +75,7 @@
 
 .footer-links li {
     font-size: .7rem;
-    color: #bbb;
+    color: #999;
     padding: 0 0.5rem;
     position: relative;
 }

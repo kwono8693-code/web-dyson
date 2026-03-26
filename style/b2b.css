@@ -1,6 +1,7 @@
-/* 상단 카테고리 내비게이션 */
+.b2b-wrap{
+    margin-top: 7rem;
+}
 .b2b-category {
-    padding-top: 8rem;
     margin-bottom: 4rem;
 }
 
