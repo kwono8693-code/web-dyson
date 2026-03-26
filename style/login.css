@@ -8,12 +8,12 @@
     text-align: center;
 }
 .login {
-    padding: 10rem 0;
     min-width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10rem 0;
 }
 .logo-login {
     margin-bottom: 2.5rem;
@@ -21,33 +21,32 @@
 }
 
 .logo-login img {
-    width: 4.5rem; /* 약 90px */
+    width: 4.5rem;
 }
 
-/* 폼 영역이 100% 너비를 가지도록 설정 */
 .login form {
     width: 100%;
 }
 
 .input-group {
-    margin-bottom: 0.5rem; /* 10px */
+    margin-bottom: 0.5rem; 
 }
 
 .input-group input {
     width: 100%;
-    padding: 0.6rem 0; /* 12px */
+    padding: 0.6rem 0;
     border: none;
     border-bottom: 1px solid #000;
-    font-size: 0.7rem; /* 14px */
+    font-size: 0.7rem; 
     outline: none;
 }
 
 .remember-me {
     display: flex;
     align-items: center;
-    margin: 0.75rem 0; /* 15px */
-    font-size: 0.65rem; /* 13px */
-    width: 100%; /* 왼쪽 정렬 유지 */
+    margin: 0.75rem 0;
+    font-size: 0.65rem; 
+    width: 100%;
 }
 
 .remember-me input {
@@ -56,22 +55,22 @@
 
 .btn-login {
     width: 100%;
-    height: 2.2rem; /* 44px */
+    height: 2.2rem; 
     background-color: #000;
     color: #fff;
     border: none;
-    font-size: 0.7rem; /* 14px */
+    font-size: 0.7rem; 
     cursor: pointer;
-    margin-bottom: 0.5rem; /* 10px */
+    margin-bottom: 0.5rem; 
 }
 
 .btn-kakao {
     width: 100%;
-    height: 2.2rem; /* 44px */
+    height: 2.2rem; 
     background-color: #fee500;
     color: #000;
     border: none;
-    font-size: 0.7rem; /* 14px */
+    font-size: 0.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,14 +78,14 @@
 }
 
 .kakao-icon {
-    width: 0.9rem; /* 18px */
-    margin-right: 0.4rem; /* 8px */
+    width: 0.9rem;
+    margin-right: 0.4rem;
 }
 
 .login-footer-links {
     list-style: none;
     padding: 0;
-    margin-top: 1.25rem; /* 25px */
+    margin-top: 1.25rem; 
     display: flex;
     justify-content: center;
     width: 100%;
@@ -96,7 +95,7 @@
     font-size: 0.7rem;
     color: #999;
     position: relative;
-    padding: 0 0.5rem; /* 10px */
+    padding: 0 0.5rem; 
 }
 
 .login-footer-links li:not(:last-child)::after {
