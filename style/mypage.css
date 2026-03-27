@@ -31,7 +31,6 @@
     padding: 1rem 3rem;
     font-size: .8rem;
     cursor: pointer;
-    border-radius: 20px;
 }
 
 .summary-right {
@@ -150,9 +149,7 @@
 .mypage-like {
     margin-top: 5rem;
 }
-.summary-item{
-    border-right: 1px solid #ccc;
-}
+
 .summary-item:last-of-type{
     border-right: none;
 }
@@ -189,5 +186,20 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+    .summary-item {
+        border-right: 1px solid #ccc;
+    }
+    .summary-left {
+        padding-left: 2rem;
+    }
+    .order-process {
+        margin-bottom: 0;
+    }
+    .process-arrow {
+        width: .5rem;
+        height: .5rem;
+        border-top: 1px solid #ccc;
+        border-right: 1px solid #ccc;
     }
 }

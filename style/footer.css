@@ -194,4 +194,7 @@ footer > p{
         display: flex;
         flex-direction: column;
     }
+    .footer1 .item .title {
+        margin-right: 1rem;
+    }
 }

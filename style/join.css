@@ -81,7 +81,7 @@
 .btn-outline {
     border: 1px solid #000;
     padding: 0.4rem 0.8rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     cursor: pointer;
     white-space: nowrap;
     background-color: #333;
@@ -111,9 +111,12 @@
 }
 
 .check-item span {
-    font-size: .7rem;
+    font-size: .8rem;
     line-height: 1.4;
     word-break: keep-all;
+}
+#check-all+span{
+    font-weight: 600;
 }
 
 .red { color: #ff0000; }
@@ -130,11 +133,13 @@
     cursor: pointer;
     margin-top: 1rem;
 }
+
+
 @media (max-width:1024px){
     .btn-outline {
-    min-width: 70px;
-    min-height: 30px;
-}
+        min-height: 30px;
+    }
+
 }
 
 @media (max-width:768px){

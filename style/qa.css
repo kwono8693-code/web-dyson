@@ -15,10 +15,11 @@
 }
 .intro-img{
     margin-bottom: 2rem;
+    height: 500px;
 }
 .intro-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -73,6 +74,7 @@
     border: 1px solid #ddd;
     padding: 0 1rem;
     font-size: 0.75rem;
+    min-height: 30px;
 }
 
 .search-form input {
@@ -86,6 +88,7 @@
     padding: 0 2rem;
     font-size: 0.75rem;
     cursor: pointer;
+    min-height: 30px;
 }
 
 /* 모달 시스템 */
@@ -185,5 +188,12 @@
         min-height: 80px;
         flex-direction: column;
         gap: .5rem;
+    }
+    .intro-img {
+        margin-bottom: 2rem;
+        height: 200px;
+    }
+    .intro-img img {
+        object-fit: contain;
     }
 }
