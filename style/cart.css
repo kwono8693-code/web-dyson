@@ -511,8 +511,7 @@
         font-size: 0.75rem;
         color: #333;
         text-decoration: none;
-        border-bottom: 1px solid #333;
-        padding-bottom: 2px;
+        padding:.5rem 1rem;
     }
 
     .summary-top{
