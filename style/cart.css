@@ -316,7 +316,7 @@
         display: block;
         font-size: 0.9rem;
         color: var(--pt-blue);
-        margin-top: 0.2rem;
+        margin-top: 0;
     }
 
     .item-bottom {
