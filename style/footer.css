@@ -1,3 +1,5 @@
+
+
 footer {
     background-color: #333;
     color: #fff;
@@ -10,6 +12,7 @@ footer .common-frame h3{
     text-align: left;
     font-size:1.6rem;
     margin-bottom:1rem;
+    opacity: .7;
 }
 /* footer1 */
 .footer1{
@@ -21,18 +24,21 @@ footer .common-frame h3{
 
 .footer1 .item{
     display:flex;
-    gap:1rem;
+    gap:3rem;
 }
 
 .footer1 .title {
     font-weight: 600;
     white-space: nowrap;
+    opacity: .7;
 }
 
-.footer1 .content p{
-    margin-bottom:.5rem;
-    color:#fff;
+.footer1 .content p {
+    margin-bottom: .5rem;
+    color: #fff;
     font-weight: 300;
+    font-size: .8rem;
+    opacity: .7;
 }
 
 /* footer2 */
@@ -42,6 +48,7 @@ footer .common-frame h3{
     justify-content:space-between;
     align-items:center;
     margin-bottom:1.5rem;
+    font-size: .8rem;
 }
 .sns-menu>li>a{
     display: flex;
@@ -53,6 +60,7 @@ footer .common-frame h3{
     display:flex;
     gap:.5rem;
     font-weight: 300;
+    opacity: .7;
 }
 .footer2 .sns-menu{
     display:flex;
@@ -76,7 +84,7 @@ footer .common-frame h3{
     gap:1rem;
 }
 .sns-menu img{
-    height: 1.2rem;
+    height: 1rem;
 
 }
 .sns-menu li::after{
@@ -106,6 +114,8 @@ footer .common-frame h3{
     grid-template-columns: 6.6rem 1fr;
     gap: 1rem 1rem;
     margin-bottom: 1rem;
+    font-size: .8rem;
+    opacity: .7;
 }
 .company-info dd{
     font-weight:600;
@@ -120,6 +130,7 @@ footer .common-frame h3{
     gap:1rem;
     font-size:.8rem;
     width: 100%;
+    opacity: .7;
 }
 .cert > div{
     display: flex;

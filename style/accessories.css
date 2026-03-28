@@ -110,7 +110,8 @@
         grid-template-columns: repeat(2,1fr);
     }
     .quick-item, .category-item {
-        min-height: 200px; 
+        min-height: 200px;
+        padding: 2rem 0;
     }
     .quick-item img, .category-item img{
         min-height: 100px;
