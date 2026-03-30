@@ -90,7 +90,10 @@
     justify-content: center; 
     align-items: center; 
 }
-
+.img-box img{
+    max-height: 280px;
+    object-fit: cover;
+}
 .info-box { 
     flex-grow: 1; 
     display: flex; 
@@ -249,6 +252,10 @@
     }
     .product-grid {
         grid-template-columns: repeat(2, minmax(170px, 1fr));
+    }
+    .img-box img{
+        min-height: 280px;
+        object-fit: cover;
     }
     
 }

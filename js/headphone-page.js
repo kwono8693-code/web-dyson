@@ -219,7 +219,7 @@ function updateProductGrid(items) {
 
         return `
         <article class="product-card">
-            <a href="./index.html?id=${item.id}" class="card-link">
+            <a href="./product-headphone-page.html?id=${item.id}" class="card-link">
                 <div class="img-box"><img src="${item.img}" alt="${item.name}"></div>
                 <div class="info-box">
                     <h3 class="product-name">${item.name}</h3>

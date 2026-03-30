@@ -1,0 +1,134 @@
+ul,li{
+    list-style: none;
+}
+.product-detail-container .common-frame{
+    display: flex;
+    max-width: 60rem; /* 1200px */
+    margin: 4rem auto;
+    gap: 3rem; /* 좌우 영역 사이 간격 */
+    align-items: flex-start;
+    margin-top: 7rem;
+}
+/* [왼쪽] 이미지 영역 */
+.detail-left-area {
+    flex: 1.2; /* 이미지를 조금 더 넓게 배치 */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25rem;
+}
+.detail-left-area img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* [오른쪽] 정보 영역 */
+.detail-right-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.price-group {
+}
+.origin-price {
+    font-size: 0.9rem;
+    color: #aaa;
+    text-decoration: line-through;
+}
+.sale-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.discount-rate,
+.current-price.on {
+    color: var(--pt-blue); /* 지정하신 블루 색상 적용 */
+    font-weight: 700;
+}
+
+/* 할인정보 박스 (피그마의 회색 박스) */
+.promo-container {
+    background: #f9f9f9;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+.promo-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+.promo-list {
+    list-style: decimal;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 배송/옵션 정보 */
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+.info-label { width: 4rem; font-weight: 700; }
+.color-swatch {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #0055ff; /* 다이슨 블루 */
+    border-radius: 4px;
+}
+
+/* 하단 버튼 그룹 (찜 + 장바구니 + 구매하기) */
+.action-group {
+    display: flex;
+    gap: 1em;
+    margin-top: 2rem;
+}
+.btn-heart {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-cart {
+    flex: 1;
+    height: 3rem;
+    background: #fff;
+    border: 1px solid #333;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-buy {
+    flex: 1;
+    height: 3rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 반응형: 모바일에서는 세로로 쌓임 */
+@media (max-width: 768px) {
+    .product-detail-container .common-frame {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    .detail-left-area { width: 100%; min-height: 20rem; }
+}

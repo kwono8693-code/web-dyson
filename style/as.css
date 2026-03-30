@@ -347,8 +347,14 @@
     padding-bottom: 1.5rem;
 }
 
+@media (max-width:1440px){
+    .pc{
+        display: block;
+    }
+}
 
 @media(max-width:1024px){
+
     .as-hero {
         flex-direction: column;
         align-items: flex-start;
@@ -361,6 +367,9 @@
 }
 
 @media (max-width:768px){
+    .pc{
+        display: none;
+    }
     .as-hero {
         flex-direction: column;
         padding-top: 8rem;
