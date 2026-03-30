@@ -7,6 +7,7 @@ const products = [
         desc2: "· 기간 한정 삼성카드 36개월 무이자 할부혜택", 
         desc3: "· 네이버페이 5만 포인트 적립 리뷰 이벤트", 
         price: "할인가 ₩1,590,000", 
+        originalPrice: "₩1,799,000",
         img: "./img/product-aicleaner.jpg", 
     },
     { 
@@ -27,6 +28,7 @@ const products = [
         desc2: "· 봄맞이 대청소 특가전", 
         desc3: "· 카드사 최대 12개월 무이자 할부혜택", 
         price: "할인가 ₩619,000", 
+        originalPrice: "₩699,000",
         img: "./img/product-watercleaner2.jpg", 
     },
         { 
@@ -57,6 +59,7 @@ const products = [
         desc2: "· 봄맞이 대청소 특가전", 
         desc3: "· 카드사 최대 12개월 무이자 할부 혜택", 
         price: "할인가 ₩440,000", 
+        originalPrice: "₩699,000",
         img: "./img/product-vacuumcleaner3.jpg", 
     },
         { 
@@ -67,6 +70,7 @@ const products = [
         desc2: "· 봄맞이 대청소 특가전", 
         desc3: "· 카드사 최대 12개월 무이자 할부 혜택", 
         price: "할인가 ₩499,000", 
+        originalPrice: "₩799,000",
         img: "./img/product-vacuumcleaner4.jpg", 
     },
     { 

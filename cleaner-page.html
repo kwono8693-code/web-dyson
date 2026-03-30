@@ -29,7 +29,7 @@
             <video src="./img/video-cleaner.mp4" autoplay muted loop></video>
         </div>
         <nav class="category-tabs">
-            <button class="tab active" data-filter="aicleaner">로봇 청소기</button>
+            <button class="tab" data-filter="aicleaner">로봇 청소기</button>
             <button class="tab" data-filter="watercleaner">물청소기</button>
             <button class="tab" data-filter="vacuumcleaner">진공청소기</button>
             <button class="tab" data-filter="vacuumwatercleaner">진공+물청소기</button>
@@ -59,7 +59,20 @@
     <div id="site-footer"></div> 
 
     <script src="./js/include.js"></script>
+    <script src="./js/url-params.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/cleaner-page.js"></script>
+    <script>
+        let categoryTab = getUrlParam("cate") || "aicleaner"
+        const cateTabs = document.querySelectorAll(".category-tabs>.tab")
+        cateTabs.forEach(tab=>{
+            if(tab.getAttribute("data-filter") === categoryTab){
+                tab.classList.add("active")
+            }
+        })
+        renderProducts(categoryTab)
+
+
+    </script>
 </body>
 </html>

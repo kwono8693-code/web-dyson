@@ -6,7 +6,8 @@ const products = [
         desc1: "· 화이트데이 위크 특별혜택 10만원 할인", 
         desc2: "· 3/5~31 네이버페이 결제 시 5만원 혜택", 
         desc3: "· 공식몰 단독 5% 쿠폰 적용 시 ₩740,050", 
-        price: "할인가 ₩779,000", 
+        price: "할인가 ₩779,000",
+        originalPrice: "₩879,000",
         img: "./img/product-styler1.jpg", 
     },
     { 
@@ -17,6 +18,7 @@ const products = [
         desc2: "· 3/5~31 네이버페이 결제 시 5만원 혜택", 
         desc3: "· 공식몰 단독 5% 쿠폰 적용 시 ₩740,050", 
         price: "할인가 ₩779,000", 
+        originalPrice: "₩879,000",
         img: "./img/product-styler2.jpg", 
     },
         { 
@@ -27,6 +29,7 @@ const products = [
         desc2: "· 3/5~31 네이버페이 결제 시 5만원 혜택", 
         desc3: "· 공식몰 단독 5% 쿠폰 적용 시 ₩740,050", 
         price: "할인가 ₩779,000", 
+        originalPrice: "₩879,000",
         img: "./img/product-styler3.jpg", 
     },
         { 
@@ -47,6 +50,7 @@ const products = [
         desc2: "· 스페셜 각인 서비스", 
         desc3: "· 선명한 컬과 볼륨을 위한 새로운 콘 배럴", 
         price: "할인가 ₩629,000", 
+        originalPrice: "₩699,000",
         img: "./img/product-styler5.jpg", 
     },
         { 
@@ -57,6 +61,7 @@ const products = [
         desc2: "· 스페셜 각인 서비스", 
         desc3: "· 선명한 컬과 볼륨을 위한 새로운 콘 배럴", 
         price: "할인가 ₩629,000", 
+        originalPrice: "₩699,000",
         img: "./img/product-styler6.jpg", 
     },
         { 
@@ -67,6 +72,7 @@ const products = [
         desc2: "· 스페셜 각인 서비스", 
         desc3: "· 선명한 컬과 볼륨을 위한 새로운 콘 배럴", 
         price: "할인가 ₩629,000", 
+        originalPrice: "₩699,000",
         img: "./img/product-styler7.jpg", 
     },
     { 
@@ -116,7 +122,8 @@ const products = [
         desc1: "· 공식몰 단독 5% 쿠폰 적용 시 ₩398,050", 
         desc2: "· 젖은 모발에 드라이와 스트레이트 동시 사용", 
         desc3: "· 7만원 상당 보관 케이스 증정", 
-        price: "할인가 ₩419,000", 
+        price: "할인가 ₩499,000", 
+        originalPrice: "₩599,000",
         img: "./img/product-straitner1.jpg", 
     },
         { 
@@ -126,7 +133,8 @@ const products = [
         desc1: "· 공식몰 단독 5% 쿠폰 적용 시 ₩398,050", 
         desc2: "· 젖은 모발에 드라이와 스트레이트 동시 사용", 
         desc3: "· 7만원 상당 보관 케이스 증정", 
-        price: "할인가 ₩419,000", 
+        price: "할인가 ₩499,000", 
+        originalPrice: "₩599,000",
         img: "./img/product-straitner2.jpg", 
     },
         { 
@@ -136,7 +144,8 @@ const products = [
         desc1: "· 공식몰 단독 5% 쿠폰 적용 시 ₩398,050", 
         desc2: "· 젖은 모발에 드라이와 스트레이트 동시 사용", 
         desc3: "· 7만원 상당 보관 케이스 증정", 
-        price: "할인가 ₩419,000", 
+        price: "할인가 ₩499,000", 
+        originalPrice: "₩599,000",
         img: "./img/product-straitner3.jpg", 
     },
     { 

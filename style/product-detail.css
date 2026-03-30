@@ -1,22 +1,25 @@
-ul,li{
-    list-style: none;
-}
-.product-detail-container .common-frame{
+.detail-wrap{
     display: flex;
-    max-width: 60rem; /* 1200px */
-    margin: 4rem auto;
-    gap: 3rem; /* 좌우 영역 사이 간격 */
-    align-items: flex-start;
-    margin-top: 7rem;
+    margin: 0 auto;
+    gap: 2rem; 
+    margin-top: 5rem;
+    padding: 2rem;
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 2rem;
+}
+.detail-content{
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* [왼쪽] 이미지 영역 */
 .detail-left-area {
-    flex: 1.2; /* 이미지를 조금 더 넓게 배치 */
+    flex: 1; /* 이미지를 조금 더 넓게 배치 */
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 25rem;
 }
 .detail-left-area img {
     width: 100%;
@@ -38,8 +41,7 @@ ul,li{
     line-height: 1.3;
 }
 
-.price-group {
-}
+
 .origin-price {
     font-size: 0.9rem;
     color: #aaa;
@@ -57,9 +59,6 @@ ul,li{
 
 /* 할인정보 박스 (피그마의 회색 박스) */
 .promo-container {
-    background: #f9f9f9;
-    padding: 1.2rem;
-    border-radius: 8px;
     margin: 1.5rem 0;
 }
 .promo-title {
@@ -68,10 +67,8 @@ ul,li{
     margin-bottom: 0.8rem;
 }
 .promo-list {
-    list-style: decimal;
     padding-left: 1rem;
     font-size: 0.8rem;
-    color: #555;
     line-height: 1.6;
 }
 
@@ -93,8 +90,9 @@ ul,li{
 /* 하단 버튼 그룹 (찜 + 장바구니 + 구매하기) */
 .action-group {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
     margin-top: 2rem;
+    font-size: 1rem;
 }
 .btn-heart {
     width: 3rem;
@@ -105,6 +103,9 @@ ul,li{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.btn-heart img{
+    height: 1.2rem;
 }
 .btn-cart {
     flex: 1;
@@ -123,6 +124,21 @@ ul,li{
     font-weight: 700;
     cursor: pointer;
 }
+.benefit-card{
+    display: flex;
+    gap: 1rem;
+    font-size: .8rem;
+
+}
+.benefit-card li{
+    flex: 1;
+    border: 0.5px solid #999;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.benefit-card li h4{
+    margin-bottom: .5rem;
+}
 
 /* 반응형: 모바일에서는 세로로 쌓임 */
 @media (max-width: 768px) {
@@ -131,4 +147,59 @@ ul,li{
         padding: 0 1rem;
     }
     .detail-left-area { width: 100%; min-height: 20rem; }
+    .benefit-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-name {
+        display: -webkit-box;                 /* 플렉스형 박스 (옛 사양) */
+        -webkit-box-orient: vertical;         /* 세로 방향 줄바꿈 기준*/
+        -webkit-line-clamp: 1;                /* 보여줄 최대 줄 수 */
+        overflow: hidden;                     /* 넘치는 내용 숨기기 */
+        text-overflow: ellipsis;              /* 말줄임 표기 (보조) */
+    }
+
+    .btn-cart, .btn-buy{
+        font-size: .8rem;
+    }
+}
+@media (max-width: 400px){
+    .detail-left-area {
+        max-height: 200px;
+        height: auto;
+    }
+    .action-group{
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .detail-wrap {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .action-group {
+        margin-top: 0;
+        gap: .5rem;
+    }
+    .btn-heart {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .btn-cart {
+        padding: .3rem;
+    }
+    .btn-buy {
+        padding: .3rem;
+    }
+    .promo-list{
+        padding-left: 0;
+
+    }
+    .promo-list li{
+        display: -webkit-box;                 /* 플렉스형 박스 (옛 사양) */
+        -webkit-box-orient: vertical;         /* 세로 방향 줄바꿈 기준*/
+        -webkit-line-clamp: 1;                /* 보여줄 최대 줄 수 */
+        overflow: hidden;                     /* 넘치는 내용 숨기기 */
+        text-overflow: ellipsis;              /* 말줄임 표기 (보조) */
+    }
 }

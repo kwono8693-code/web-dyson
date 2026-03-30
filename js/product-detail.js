@@ -38,16 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     <span class="info-label">배송비</span>
                     <span>무료</span>
                 </div>
-                <div class="info-row">
-                    <span class="info-label">색상</span>
-                    <div class="color-swatch"></div>
-                </div>
+                
 
                 <div class="action-group">
                     <button class="btn-heart">
                         <img src="./img/heart.svg" alt="관심 상품 등록">
                     </button>
-                    <button class="btn-cart">장바구니</button>
+                    <button class="btn-cart"><a href="./cart-page.html">장바구니</a></button>
                     <button class="btn-buy">구매하기</button>
                 </div>
             `;

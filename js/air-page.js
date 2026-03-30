@@ -27,6 +27,7 @@ const products = [
         desc2: "· 카드사 최대 12개월 무이자 할부 혜택", 
         desc3: "", 
         price: "할인가 ₩799,000", 
+        originalPrice: "₩999,000",
         img: "./img/product-airpurifier3.jpg",
     },
         { 
@@ -57,6 +58,7 @@ const products = [
         desc2: "", 
         desc3: "", 
         price: "할인가 ₩799,000",
+        originalPrice: "₩999,000",
         img: "./img/product-airpurifier6.jpg", 
     },
         { 
@@ -97,6 +99,7 @@ const products = [
         desc2: "· 카드사 최대 12개월 무이자 할부 혜택", 
         desc3: "", 
         price: "할인가 ₩1,090,000", 
+        originalPrice: "₩1,290,000",
         img: "./img/product-humidifier2.jpg", 
     },
     { 
