@@ -30,7 +30,7 @@
             <video src="./img/video-headphone.mp4" autoplay muted loop style="object-fit: contain;"></video>
         </div>
         <nav class="category-tabs">
-            <button class="tab active" data-filter="headphone">온트랙 노이즈 캔슬링 헤드폰</button>
+            <button class="tab" data-filter="headphone">온트랙 노이즈 캔슬링 헤드폰</button>
             <button class="tab" data-filter="adapters">온트랙 이어쿠션, 캡 어댑터</button>
         </nav>
         <div class="info-box2">
@@ -63,6 +63,17 @@
     <script src="./js/url-params.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/headphone-page.js"></script> 
+    <script>
+        let categoryTab = getUrlParam("cate") || "headphone"
+        const cateTabs = document.querySelectorAll(".category-tabs>.tab")
+        cateTabs.forEach(tab=>{
+            if(tab.getAttribute("data-filter") === categoryTab){
+                tab.classList.add("active")
+            }
+        })
+        renderProducts(categoryTab)
 
+
+    </script>
 </body>
 </html>

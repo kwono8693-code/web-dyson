@@ -29,7 +29,7 @@
             <video src="./img/video-hair.mp4" autoplay muted loop></video>
         </div>
         <nav class="category-tabs">
-            <button class="tab active" data-filter="styler">스타일러</button>
+            <button class="tab" data-filter="styler">스타일러</button>
             <button class="tab" data-filter="dryer">드라이어</button>
             <button class="tab" data-filter="straitner">스트레이트너</button>
             <button class="tab" data-filter="essentials">헤어 에센셜 케어</button>
@@ -63,19 +63,16 @@
     <script src="./js/header.js"></script>
     <script src="./js/hair-page.js"></script>
     <script>
-        // URL 파라미터에서 category 받아서 탭 활성화
-        const category = getUrlParam('cate');
-        if (category) {
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-                if (tab.dataset.filter === category) {
-                    tab.classList.add('active');
-                }
-            });
-            // 해당 카테고리 제품 렌더링
-            renderProducts(category);
-        }
+        let categoryTab = getUrlParam("cate") || "styler"
+        const cateTabs = document.querySelectorAll(".category-tabs>.tab")
+        cateTabs.forEach(tab=>{
+            if(tab.getAttribute("data-filter") === categoryTab){
+                tab.classList.add("active")
+            }
+        })
+        renderProducts(categoryTab)
+
+
     </script>
 </body>
 </html>

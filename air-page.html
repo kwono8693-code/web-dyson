@@ -29,7 +29,7 @@
             <video src="./img/video-air.mp4" autoplay muted loop></video>
         </div>
         <nav class="category-tabs">
-            <button class="tab active" data-filter="airpurifier">공기청정기</button>
+            <button class="tab" data-filter="airpurifier">공기청정기</button>
             <button class="tab" data-filter="humidifier">가습 공기청정기</button>
             <button class="tab" data-filter="fan">선풍기</button>
         </nav>
@@ -63,5 +63,17 @@
     <script src="./js/url-params.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/air-page.js"></script>
+    <script>
+        let categoryTab = getUrlParam("cate") || "airpurifier"
+        const cateTabs = document.querySelectorAll(".category-tabs>.tab")
+        cateTabs.forEach(tab=>{
+            if(tab.getAttribute("data-filter") === categoryTab){
+                tab.classList.add("active")
+            }
+        })
+        renderProducts(categoryTab)
+
+
+    </script>
 </body>
 </html>
