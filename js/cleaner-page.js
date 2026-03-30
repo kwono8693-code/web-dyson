@@ -86,7 +86,7 @@ const products = [
         { 
         id: 9, 
         category: "vacuumwatercleaner", 
-        name: "V12s 디텍트 슬림 서브마린 컴···", 
+        name: "V12s 디텍트 슬림 서브마린 컴플리트", 
         desc1: "· 140W(Air Watt) 흡입력", 
         desc2: "· 최대 60분 사용", 
         desc3: "· 먼지를 보여주는 일루미네이션 기능", 
