@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="promo-container">
                     <h4 class="promo-title">할인정보</h4>
                     <ul class="promo-list">
-                        <li>- 3/5~31 네이버페이로 결제 시 5만 네이버페이포인트 지급</li>
-                        <li>- 공식몰 단독 5% 쿠폰 및 카드사 사용 시 최대혜택가 적용</li>
-                        <li>- 카드사 최대 12개월 무이자 할부</li>
+                        <li>* 3/5~31 네이버페이로 결제 시 5만 네이버페이포인트 지급</li>
+                        <li>* 공식몰 단독 5% 쿠폰 및 카드사 사용 시 최대혜택가 적용</li>
+                        <li>* 카드사 최대 12개월 무이자 할부</li>
                     </ul>
                 </div>
 
