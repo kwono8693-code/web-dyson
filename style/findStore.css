@@ -108,6 +108,7 @@
         padding-right: 4rem;
     }
 
+
 }
 @media(max-width:500px){
     .banner-txt {
@@ -117,5 +118,11 @@
     .store-banner-section{
         background: url(../img/storebanner1.jpg) no-repeat 35% 50% / cover;
         height: 200px;
+    }
+        .btn-store-search {
+        padding: 1rem 2rem;
+    }
+    .btn-store-search {
+        font-size: 0.9rem;
     }
 }

@@ -66,11 +66,9 @@
 
 /* 푸터 링크 스타일 */
 .footer-links {
-    list-style: none;
     display: flex;
     justify-content: center;
     margin-top: 1.25rem;
-    padding: 0;
 }
 
 .footer-links li {
@@ -115,4 +113,17 @@
 
 @media (max-width: 768px) {
 
+}
+@media (max-width: 400px) {
+    .order-lookup-box {
+        padding: 0;
+        width: 100%;
+        max-width: 25rem; /* 최대 너비만 제한 (약 500px) */
+    }
+    .order-lookup-container {
+        padding: 0;
+    }
+    .order-lookup-box {
+        border: none;
+    }
 }
