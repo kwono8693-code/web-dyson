@@ -111,14 +111,15 @@
 }
 .action-group a{
     flex: 1;
+    border: 1px solid #333;
 }
 .btn-cart {
     background: #fff;
-    border: 1px solid #333;
     font-weight: 700;
     cursor: pointer;
     height: 100%;
     width: 100%;
+    border: none;
 }
 .btn-buy {
     flex: 1;
@@ -197,7 +198,7 @@
         width: 1.2rem;
         height: 1.2rem;
     }
-    .btn-cart {
+    .action-group a {
         padding: .3rem;
     }
     .btn-buy {
