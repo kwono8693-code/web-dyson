@@ -124,7 +124,6 @@
     padding: 1rem;
     border: 1px solid #eee; /* 아주 연한 회색 테두리 */
     background: #fff;
-    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease; /* 애니메이션 속도 */
 }
@@ -256,7 +255,7 @@
 }
 .as-description h3{
     font-size: 1.6rem;
-    padding: 1.5rem .5rem;
+    padding: 0 0 1.5rem;
     border-bottom: 1px solid #000;
 }
 .desc-text{
@@ -317,7 +316,7 @@
 
 .service-center-info h3{
     font-size: 1.6rem;
-    padding: 1.5rem .5rem;
+    padding: 0 0 1.5rem;
     border-bottom: 1px solid #000;
     margin-bottom: 1rem;
 }
@@ -402,4 +401,38 @@
     .center-map{
         aspect-ratio: 374/250;
     }
+    .hero-text {
+        align-items: flex-start;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    .search-input-group h3 {
+        font-size: 1.5rem;
+    }
+    .problem-category {
+        text-align: left;
+    }
+    .category-header .section-title {
+        font-size: 1.5rem;
+    }
+    .as-description h3 {
+        font-size: 1.5rem;
+    }
+        .delivery-as-info h3 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:400px){
+    .category-item .img-box {
+        flex: 2;
+    }
+    .category-item {
+        min-height: 150px;
+        padding: 0.5rem 0 1rem;
+    }
+    .service-center-info h3 {
+        font-size: 1.5rem;
+    }
+
 }

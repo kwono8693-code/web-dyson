@@ -266,4 +266,14 @@
     .category-tabs {
         justify-content: flex-start;
     }
+    .price {
+        margin-top: 1rem;
+    }
+    .product-card {
+        padding: 1rem;
+    }
+    .product-name {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
 }
