@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button class="btn-heart">
                         <img src="./img/heart.svg" alt="관심 상품 등록">
                     </button>
-                    <button class="btn-cart"><a href="./cart-page.html">장바구니</a></button>
+                    <a href="./cart-page.html">
+                        <button class="btn-cart">장바구니</button>
+                    </a>
                     <button class="btn-buy">구매하기</button>
                 </div>
             `;
