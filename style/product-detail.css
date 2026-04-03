@@ -9,9 +9,7 @@
 }
 .detail-content{
     margin: 5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 /* [왼쪽] 이미지 영역 */
 .detail-left-area {
@@ -145,7 +143,13 @@
 .benefit-card li h4{
     margin-bottom: .5rem;
 }
-
+figure{
+    line-height: 0;
+}
+.gif{
+    max-width: 860px;
+    width: 100%;
+}
 /* 반응형: 모바일에서는 세로로 쌓임 */
 @media (max-width: 768px) {
     .product-detail-container .common-frame {
